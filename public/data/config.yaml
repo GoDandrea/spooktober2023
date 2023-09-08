@@ -3,8 +3,6 @@ gameTitle: Narrat Demo
 saveFileName: Narrat Demo
 dialogPanel:
   overlayMode: true
-  rightOffset: 100
-  bottomOffset: 50
   width: 475
   height: 680
   textSpeed: 20

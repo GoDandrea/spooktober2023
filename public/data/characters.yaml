@@ -51,20 +51,8 @@ characters:
     style:
       color: "#675629"
       boxCss:
-        background-color: black
-        position: absolute
-        left: 22%
-        top: 10%
-        width: 35%
-        border-width: 5px
-        border-color: white
-        padding: 20px;
-        border-radius: 20px;
-      textCss:
-        color: white
-        font-family: Helvetica
-        font-style: bold
-        font-size: 22px
+        left: 14%
+        top: 3%
     sprites:
       idle: protag.png
       offscreen: none
@@ -76,18 +64,6 @@ characters:
     style:
       color: "#ab574e"
       boxCss:
-        background-color: black
-        position: absolute
-        right: 25%
-        bottom: 1%
-        width: 35%
-        border-width: 5px
-        border-color: white
-        padding: 20px;
-        border-radius: 20px;
-      textCss:
-        color: white
-        font-family: Helvetica
-        font-style: bold
-        font-size: 22px
+        right: 30%
+        bottom: 6%
     name: Mother
