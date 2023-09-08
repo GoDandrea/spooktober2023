@@ -11,18 +11,6 @@ characters:
     sprites:
       idle: player.webp
     name: You
-  protag:
-    style:
-      color: "#675629"
-    sprites:
-      idle: protag.png
-    name: Protag
-  mother:
-    style:
-      color: "#875343"
-    sprites:
-      idle: mother.png
-    name: Mother
   cat:
     sprites:
       idle: cat_idle.webp
@@ -59,3 +47,46 @@ characters:
     style:
       color: red
     name: Inner Voice
+  protag:
+    style:
+      color: "#675629"
+      boxCss:
+        background-color: black
+        position: absolute
+        left: 275px
+        top: 72px
+        width: 600px
+        border-width: 5px
+        border-color: white
+        padding: 20px;
+        border-radius: 20px;
+      textCss:
+        color: white
+        font-family: Helvetica
+        font-style: bold
+        font-size: 22px
+    sprites:
+      idle: protag.png
+      offscreen: none
+    name: Protag
+  mother:
+    sprites:
+      idle: mother.png
+    style:
+      color: "#ab574e"
+      boxCss:
+        background-color: black
+        position: absolute
+        right: 300px
+        bottom: 100px
+        width: 600px
+        border-width: 5px
+        border-color: white
+        padding: 20px;
+        border-radius: 20px;
+      textCss:
+        color: white
+        font-family: Helvetica
+        font-style: bold
+        font-size: 22px
+    name: Mother

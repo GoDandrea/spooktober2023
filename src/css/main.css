@@ -28,3 +28,30 @@
   width: 100% !important;
   height: 100% !important;
 }
+
+.dialog {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.dialog-picture {
+  position: absolute;
+  right: 100px !important;
+  bottom: 0px !important;
+  height: auto !important;
+  width: 300px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  z-index: 99;
+}
+
+/* .interact-button {
+  visibility: hidden;
+} */
