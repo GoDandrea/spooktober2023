@@ -19,7 +19,7 @@ prototypeStart:
   talk mother idle "...undone by the blood."
   wait 1500
   set_setting textSpeed 20
-  talk mother idle "Our eyes are yet to open..."
+  talk mother rage "Our eyes are yet to open..."
   clear_dialog
   talk protag offscreen "Fear the old blood."
   clear_dialog

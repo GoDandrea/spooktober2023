@@ -53,9 +53,9 @@ characters:
       boxCss:
         background-color: black
         position: absolute
-        left: 275px
-        top: 72px
-        width: 600px
+        left: 22%
+        top: 10%
+        width: 35%
         border-width: 5px
         border-color: white
         padding: 20px;
@@ -72,14 +72,15 @@ characters:
   mother:
     sprites:
       idle: mother.png
+      rage: mother-rage.png
     style:
       color: "#ab574e"
       boxCss:
         background-color: black
         position: absolute
-        right: 300px
-        bottom: 100px
-        width: 600px
+        right: 25%
+        bottom: 1%
+        width: 35%
         border-width: 5px
         border-color: white
         padding: 20px;
