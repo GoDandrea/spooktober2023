@@ -10,3 +10,21 @@
 }
 
 /* Add any other CSS you want here */
+#viewport-layer-kitchen {
+  background-image: url(&quot;img/backgrounds/kitchen.png&quot;);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#viewport-layer-background-kitchen {
+  background-image: url(&quot;img/backgrounds/kitchen.png&quot;);
+  background-size: 100% auto;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100% !important;
+  height: 100% !important;
+}

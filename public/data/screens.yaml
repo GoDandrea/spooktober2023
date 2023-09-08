@@ -3,6 +3,8 @@ screens:
     background: img/backgrounds/curtain.webp
   narrat:
     background: img/backgrounds/narrat.webp
+  kitchen:
+    background: img/backgrounds/kitchen.png
   map:
     background: img/backgrounds/map.webp
     buttons:

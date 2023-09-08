@@ -2,10 +2,18 @@ main:
   "You open the narrat demo and wonder what narrat is and how it works"
   choice:
     talk helper idle "Would you like some help?"
-    "Ask for help":
+    "Yes, please":
       jump askForHelp
     "No, I don't want help 😡"
       jump dontAskForHelp
+    "Actually, I'd like to see the <strong>prototype</strong>"
+      jump goToPrototype
+
+goToPrototype:
+  talk helper idle "A person of taste, I see."
+  talk helper idle "Very well."
+  talk helper glow "Come with me."
+  jump prototypeStart
 
 dontAskForHelp:
   // clear_dialog
