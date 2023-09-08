@@ -1,12 +1,13 @@
 prototypeStart:
+  clear_dialog
+  set_screen kitchen 0 fade 2000 2000
+
+  change_player_character protag
   set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
   set data.avatar.width 150
   set data.avatar.height 150
 
-  clear_dialog
-  set_screen kitchen 0 fade 2000 2000
-  change_player_character protag
-  talk protag offscreen "Mother, I've come to bid you farewell."
+  talk protag offscreen "Mother, I've come to bid you farewell"
   clear_dialog
   talk mother idle "Oh, I know."
   talk mother idle "You think now to betray me."
@@ -28,3 +29,30 @@ prototypeStart:
   talk protag offscreen "I must take my leave."
   clear_dialog
   talk mother idle "By the gods, fear it, my daughter."
+  jump first_choice
+
+first_choice:
+  empty_sprites
+  clear_dialog
+  change_theme choices
+  set data.shadow (create_sprite img/characters/mother-dark.png 225)
+  set data.shadow.bottom 0
+  set data.shadow.cssClass shadow
+
+  choice:
+    think protag idle "Should I fear the old blood?"
+    "Yep":
+      add_stat mother_influence +10
+      clear_dialog
+      think protag idle "Must succumb to mother"
+    "Fo'Sho!":
+      add_stat mother_influence +10
+      clear_dialog
+      think protag idle "Mother knows best"
+    "Nope":
+      add_stat mother_influence -10
+      clear_dialog
+      change_theme default
+      empty_sprites
+      talk mother idle "HAHhaHAHAHhahHAHHa"
+      talk mother idle "Francamente...!"

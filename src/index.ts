@@ -1,6 +1,7 @@
 import "narrat/dist/style.css";
 import "./css/main.css";
 import { NarratPlugin, registerPlugin, startApp } from "narrat";
+import { Theme, ThemeSwappingPlugin } from "./ThemeSwappingPlugin";
 import scripts from "./scripts";
 // Enable this when releasing for steam
 const useSteam = false;
@@ -52,6 +53,11 @@ window.addEventListener("load", () => {
   if (useSteam) {
     registerPlugin(new SteamPlugin());
   }
+  registerPlugin(
+    new ThemeSwappingPlugin({
+      themes,
+    })
+  );
   startApp({
     configPath: "data/config.yaml",
     debug,
@@ -59,3 +65,10 @@ window.addEventListener("load", () => {
     scripts,
   });
 });
+
+const themes: Theme[] = [
+  {
+    id: "choices",
+    cssPath: "public/css/choices.css",
+  },
+];
