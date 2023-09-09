@@ -12,6 +12,15 @@ files:
     src: audio/game_start.ogg
   failure:
     src: audio/failure.ogg
+  kitchen:
+    loop: false
+    src: music/yahaveva-kitchen.mp3
+  ambience_1:
+    loop: true
+    src: music/klankbeeld-roomtone.mp3
+  ambience_2:
+    loop: true
+    src: music/grimmreapersounds-bass.mp3
 options:
   volume: 0.5
   musicFadeInTime: 0.5

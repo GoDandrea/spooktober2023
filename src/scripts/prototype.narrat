@@ -1,5 +1,7 @@
 prototypeStart:
   clear_dialog
+  play music ambience_1
+  play sound ambience_2
   set_screen kitchen 0 fade 2000 2000
 
   change_player_character protag
@@ -15,6 +17,9 @@ prototypeStart:
   talk protag offscreen "No, but you'll never listen. I tell you, I won't forget our adage."
   clear_dialog
   set_setting textSpeed 40
+
+  play sound kitchen
+
   talk mother idle "We are born of the blood,"
   talk mother idle "...made woman by the blood,"
   talk mother idle "...undone by the blood."
@@ -52,7 +57,19 @@ first_choice:
     "Nope":
       add_stat mother_influence -10
       clear_dialog
-      change_theme default
-      empty_sprites
-      talk mother idle "HAHhaHAHAHhahHAHHa"
-      talk mother idle "Francamente...!"
+      jump francamente
+
+francamente:
+  empty_sprites
+  change_theme default
+  set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
+  set data.avatar.width 150
+  set data.avatar.height 150
+  
+  talk mother idle "HAHhaHAHAHhahHAHHa"
+
+  clear_dialog
+  change_theme char-center
+  talk mother idle "Francamente...!"
+  clear_dialog
+  talk mother dark "<i>Francamente...!</i>"
