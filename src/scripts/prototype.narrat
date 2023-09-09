@@ -50,10 +50,12 @@ first_choice:
       add_stat mother_influence +10
       clear_dialog
       think protag idle "Must succumb to mother"
+      jump first_choice
     "Fo'Sho!":
       add_stat mother_influence +10
       clear_dialog
       think protag idle "Mother knows best"
+      jump first_choice
     "Nope":
       add_stat mother_influence -10
       clear_dialog
