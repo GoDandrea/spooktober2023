@@ -6,8 +6,15 @@ main:
       jump askForHelp
     "No, I don't want help 😡"
       jump dontAskForHelp
+    "What has Cabeça been up to?"
+      jump cabeçaUpTo
     "Actually, I'd like to see the <strong>prototype</strong>"
       jump goToPrototype
+
+cabeçaUpTo:
+  talk helper idle "An exploration of character voices. The Protagonist and her Ex, this time."
+  talk helper idle "Come and see."
+  jump prototypeProtagExMood
 
 goToPrototype:
   talk helper idle "A person of taste, I see."

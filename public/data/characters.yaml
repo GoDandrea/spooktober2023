@@ -67,3 +67,11 @@ characters:
         right: 30%
         bottom: 6%
     name: Mother
+  ex_bf:
+    sprites:
+      idle: ex_bf.png
+    style:
+      color: "#5a486c"
+      boxCss:
+        right: 30%
+        bottom: 6%

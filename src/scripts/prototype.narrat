@@ -56,3 +56,13 @@ first_choice:
       empty_sprites
       talk mother idle "HAHhaHAHAHhahHAHHa"
       talk mother idle "Francamente...!"
+
+prototypeProtagExMood:
+  clear_dialog
+  set_screen beach 0 fade 2000 2000
+
+  change_player_character protag
+  set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
+  set data.avatar.width 150
+  set data.avatar.height 150
+
