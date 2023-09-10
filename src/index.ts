@@ -71,4 +71,8 @@ const themes: Theme[] = [
     id: "choices",
     cssPath: "public/css/choices.css",
   },
+  {
+    id: "char-center",
+    cssPath: "public/css/char-center.css",
+  },
 ];

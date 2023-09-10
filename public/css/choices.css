@@ -1,14 +1,7 @@
 .dialog-box {
-  width: 35%;
   height: 100px;
   left: 50% !important;
-  right: auto !important;
   top: 20% !important;
-}
-
-.dialog-picture {
-  left: 100px !important;
-  right: auto !important;
 }
 
 .dialog-choices {
@@ -27,6 +20,11 @@
   border-radius: 15px !important;
   width: 100%;
   height: 100px;
+}
+
+.dialog-picture {
+  left: 100px !important;
+  right: auto !important;
 }
 
 .shadow {

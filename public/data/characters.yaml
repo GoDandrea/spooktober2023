@@ -61,6 +61,7 @@ characters:
     sprites:
       idle: mother.png
       rage: mother-rage.png
+      dark: mother-dark.png
     style:
       color: "#ab574e"
       boxCss:
