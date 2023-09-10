@@ -32,14 +32,11 @@ prototypeStart:
   wait 1500
   set_setting textSpeed 20
   talk mother rage "Our eyes are yet to open..."
-  clear_dialog
   run as_protag "Fear the old blood."
-  clear_dialog
   talk mother idle "Fear the old blood."
-  clear_dialog
   run as_protag "I must take my leave."
-  clear_dialog
   talk mother idle "By the gods, fear it, my daughter."
+
   jump first_choice
 
 first_choice:
@@ -65,18 +62,12 @@ first_choice:
     "Nope":
       add_stat mother_influence -10
       clear_dialog
-      change_theme default
-      empty_sprites
-      talk mother idle "HAHhaHAHAHhahHAHHa"
-      talk mother idle "Francamente...!"
       jump francamente
 
 francamente:
   empty_sprites
   change_theme default
-  set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
-  set data.avatar.width 150
-  set data.avatar.height 150
+  run setup_protag
   
   talk mother idle "HAHhaHAHAHhahHAHHa"
 
@@ -106,17 +97,25 @@ prototypeProtagExMood:
   run as_protag "Not really, no. You cared, but it's not the same as me caring about myself."
   run as_protag "And it was never about me. It was about you."
   run as_protag "Even when taking care of me, it was about you."
-  talk ex_bf idle "How is taking you away from your mother about me? Going to the places you liked, doing the things you wanted?"
+  talk ex_bf idle "How is taking you away from your mother about me?"
+  talk ex_bf idle "Going to the places you liked, doing the things you wanted?"
   talk ex_bf idle "How was giving you all that space ever about me?"
   talk ex_bf idle "How could any of this be about me?"
   run as_protag "I didn't have any space. You removed my mother and my old job to occupy my time instead."
-  run as_protag "The places I liked were the places <i>you</i> liked which I enjoyed too. The things I wanted were the things you could afford to give away freely."
-  run as_protag "You never really had to sacrifice anything for me, not really. I strained my relation with my mother and put my old job on the line to be with you when you wanted."
+  run as_protag "The places I liked were the places <i>you</i> liked which I enjoyed too."
+  run as_protag "The things I wanted were the things you could afford to give away freely."
+  run as_protag "You never really had to sacrifice anything for me, not really."
+  run as_protag "I strained my relation with my mother and put my old job on the line to be with you when you wanted."
   talk ex_bf idle "You hate you mother and you hated that job. You needed this."
-  run as_protag "No, I needed peace. A getaway. You only offered either of those things if it didn't interfere with your plans."
+  run as_protag "No, I needed peace. A getaway."
+  run as_rptag "You only offered either of those things if it didn't interfere with your plans."
   talk ex_bf idle "But it was good for you anyway. It <i>was</i> what you <i>needed</i>."
-  run as_protag "I had to bend over backwards to fit the way you wanted things to be. Giving me this space was never the goal, it was just a convenient consequence of you not giving a shit about any of those things. My job, my mother, it was just background noise to your desire to be with me."
-  talk ex_bf idle "So is that how you want to call other's concern for you? 'Convenient consequences' of their own self interest?"
+  run as_protag "I had to bend over backwards to fit the way you wanted things to be."
+  run as_protag "Giving me this space was never the goal,"
+  run as_protag "it was just a convenient consequence of you not giving a shit about any of those things."
+  run as_protag "My job, my mother, it was just background noise to your desire to be with me."
+  talk ex_bf idle "So is that how you want to call other's concern for you?"
+  talk ex_bf idle "'Convenient consequences' of their own self interest?"
   run as_protag "Not other's, yours." 
   run as_protag "I made you happy so you took care of me. I was useful for you."
   talk ex_bf idle "Don't say it like that..."
