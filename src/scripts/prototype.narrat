@@ -1,19 +1,25 @@
-prototypeStart:
-  clear_dialog
-  set_screen kitchen 0 fade 2000 2000
-
+setup_protag:
   change_player_character protag
   set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
   set data.avatar.width 150
   set data.avatar.height 150
 
-  talk protag offscreen "Mother, I've come to bid you farewell"
+as_protag line:
   clear_dialog
+  talk protag offscreen "%{$line}"
+  clear_dialog
+
+// Actual start of dialogue
+prototypeStart:
+  clear_dialog
+  set_screen kitchen 0 fade 2000 2000
+
+  run setup_protag
+
+  run as_protag "Mother, I've come to bid you farewell"
   talk mother idle "Oh, I know."
   talk mother idle "You think now to betray me."
-  clear_dialog
-  talk protag offscreen "No, but you'll never listen. I tell you, I won't forget our adage."
-  clear_dialog
+  run as_protag "No, but you'll never listen. I tell you, I won't forget our adage."
   set_setting textSpeed 40
   talk mother idle "We are born of the blood,"
   talk mother idle "...made woman by the blood,"
@@ -22,11 +28,11 @@ prototypeStart:
   set_setting textSpeed 20
   talk mother rage "Our eyes are yet to open..."
   clear_dialog
-  talk protag offscreen "Fear the old blood."
+  run as_protag "Fear the old blood."
   clear_dialog
   talk mother idle "Fear the old blood."
   clear_dialog
-  talk protag offscreen "I must take my leave."
+  run as_protag "I must take my leave."
   clear_dialog
   talk mother idle "By the gods, fear it, my daughter."
   jump first_choice
@@ -61,8 +67,33 @@ prototypeProtagExMood:
   clear_dialog
   set_screen beach 0 fade 2000 2000
 
-  change_player_character protag
-  set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
-  set data.avatar.width 150
-  set data.avatar.height 150
+  run setup_protag
 
+  talk ex_bf idle "Why did you leave?"
+  run as_protag "When?"
+  talk ex_bf idle "The first time."
+  run as_protag "Oh"
+  run as_protag "I had to. For my own sake."
+  talk ex_bf idle "It hurt me."
+  talk ex_bf idle "A lot."
+  run as_protag "I know. I'm sure it did."
+  run as_protag "It wasn't on purpose."
+  run as_protag "You hurt me too. I had to look after myself."
+  talk ex_bf idle "Didn't I look after you?"
+  run as_protag "Not really, no. You cared, but it's not the same as me caring about myself."
+  run as_protag "And it was never about me. It was about you."
+  run as_protag "Even when taking care of me, it was about you."
+  talk ex_bf idle "How is taking you away from your mother about me? Going to the places you liked, doing the things you wanted?"
+  talk ex_bf idle "How was giving you all that space ever about me?"
+  talk ex_bf idle "How could any of this be about me?"
+  run as_protag "I didn't have any space. You removed my mother and my old job to occupy my time instead."
+  run as_protag "The places I liked were the places <i>you</i> liked which I enjoyed too. The things I wanted were the things you could afford to give away freely."
+  run as_protag "You never really had to sacrifice anything for me, not really. I strained my relation with my mother and put my old job on the line to be with you when you wanted."
+  talk ex_bf idle "You hate you mother and you hated that job. You needed this."
+  run as_protag "No, I needed peace. A getaway. You only offered either of those things if it didn't interfere with your plans."
+  talk ex_bf idle "But it was good for you anyway. It <i>was</i> what you <i>needed</i>."
+  run as_protag "I had to bend over backwards to fit the way you wanted things to be. Giving me this space was never the goal, it was just a convenient consequence of you not giving a shit about any of those things. My job, my mother, it was just background noise to your desire to be with me."
+  talk ex_bf idle "So is that how you want to call other's concern for you? 'Convenient consequences' of their own self interest?"
+  run as_protag "Not other's, yours." 
+  run as_protag "I made you happy so you took care of me. I was useful for you."
+  talk ex_bf idle "Don't say it like that..."

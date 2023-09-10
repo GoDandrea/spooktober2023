@@ -36,6 +36,16 @@
   height: 100% !important;
 }
 
+#viewport-layer-background-beach {
+  background-image: url(&quot;img/backgrounds/beach.png&quot;);
+  background-size: 100% auto;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .dialog {
   overflow-y: auto;
   overflow-x: hidden;
