@@ -125,6 +125,6 @@ picolé:
   set_screen beach 0 fade 2000 2000
 
   run setup_protag
-  talk ex_bf idle "Bora comprar um picolé?"
+  talk ex_bf idle "Bora comprar um milho?"
   run as_protag "Pera, xo pedir um pix pro meu pai"
   
