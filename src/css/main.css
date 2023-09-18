@@ -74,6 +74,11 @@
   font-size: 22px;
 }
 
+.list-enter-active,
+.list-leave-active {
+  transition: unset;
+}
+
 .dialog-picture {
   position: absolute;
   right: 100px !important;

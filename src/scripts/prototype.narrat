@@ -11,6 +11,7 @@ as_protag line:
 
 // Actual start of dialogue
 prototypeStart:
+  empty_sprites
   clear_dialog
   play music ambience_1
   play sound ambience_2
