@@ -1,7 +1,10 @@
 .dialog-box {
-  height: 100px;
+  position: fixed;
+  width: 35% !important;
   left: 50% !important;
   top: 20% !important;
+  height: 100px;
+  margin-top: 0px !important;
 }
 
 .dialog-choices {
