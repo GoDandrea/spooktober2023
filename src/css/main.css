@@ -57,14 +57,16 @@
 }
 
 .dialog-box {
-  background-color: black;
+  background-image: url("img/ui/dialog-box.png");
+  background-size: cover;
   position: fixed;
   width: 35%;
   height: 142px;
+  /* background-color: black;
   border-width: 5px;
   border-color: white;
-  padding: 20px !important;
-  border-radius: 15px !important;
+  border-radius: 15px !important; */
+  padding: 30px !important;
   transform: none !important;
 }
 

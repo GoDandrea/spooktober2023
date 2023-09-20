@@ -52,13 +52,13 @@ first_choice:
 
   choice:
     think protag idle "Should I fear the old blood?"
-    "<p class=choice id=mother>Yep</p>":
+    "<p class='choice mother'>Yep</p>":
       clear_dialog
       wait 100
       add_stat mother_influence +10
       think protag idle "Must succumb to mother"
       jump first_choice
-    "<p class=choice id=boyfriend>Fo'Sho!</p>":
+    "<p class='choice boyfriend'>Fo'Sho!</p>":
       clear_dialog
       wait 100
       add_stat mother_influence +10
