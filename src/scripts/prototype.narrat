@@ -1,15 +1,3 @@
-setup_protag:
-  change_player_character protag
-  set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
-  set data.avatar.width 150
-  set data.avatar.height 150
-
-as_protag line:
-  clear_dialog
-  talk protag offscreen "%{$line}"
-  clear_dialog
-
-// Actual start of dialogue
 prototypeStart:
   empty_sprites
   clear_dialog
@@ -50,9 +38,10 @@ first_choice:
   set data.shadow.bottom 0
   set data.shadow.cssClass shadow
 
+  var myVariable (run influenced_dialogue "mother" "Yep")
   choice:
     think protag idle "Should I fear the old blood?"
-    "<p class='choice mother'>Yep</p>":
+    "%{$myVariable}":
       clear_dialog
       wait 100
       add_stat mother_influence +10
