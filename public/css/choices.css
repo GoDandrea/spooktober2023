@@ -32,10 +32,6 @@
 .choice {
   background-image: url("img/ui/dialog-box.png");
   background-size: cover;
-  /* background-color: black;
-  border-width: 5px;
-  border-color: white;
-  border-radius: 15px !important; */
   padding: 20px !important;
   width: 100%;
   height: 100px;
@@ -44,10 +40,16 @@
 }
 
 .boyfriend {
+  border-width: 5px;
+  border-color: white;
+  border-radius: 15px !important;
   background-color: #44135f;
 }
 
 .mother {
+  border-width: 5px;
+  border-color: white;
+  border-radius: 15px !important;
   background-color: #430300;
 }
 

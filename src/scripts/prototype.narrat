@@ -38,10 +38,10 @@ first_choice:
   set data.shadow.bottom 0
   set data.shadow.cssClass shadow
 
-  var myVariable (run influenced_dialogue "mother" "Yep")
+  var choice1 (run influenced_dialogue "mother" "Yep")
   choice:
     think protag idle "Should I fear the old blood?"
-    "%{$myVariable}":
+    "%{$choice1}":
       clear_dialog
       wait 100
       add_stat mother_influence +10

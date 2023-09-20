@@ -10,5 +10,5 @@ as_protag line:
   clear_dialog
 
 influenced_dialogue influence text:
-  return "<p class=choice id=%{$influence}>%{$text}</p>"
+  return "<p class='choice %{$influence}'>%{$text}</p>"
 
