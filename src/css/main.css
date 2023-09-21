@@ -7,6 +7,13 @@
   src: url("public/fonts/Laila-Light.ttf") format("woff2");
 }
 
+@font-face {
+  font-family: "Laila-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("public/fonts/Laila-Regular.ttf") format("woff2");
+}
+
 #app {
   /* Customise CSS variables here. They will override the existing narrat ones. You can also add your own variables */
   --bg-color: #131720;
@@ -57,8 +64,10 @@
 }
 
 .dialog-box {
-  background-image: url("img/ui/dialog-box.png");
+  background-image: url("img/ui/dialog-box-5.png");
   background-size: cover;
+  background-color: #7f0f0dcc;
+  border-radius: 4px !important;
   position: fixed;
   width: 35%;
   height: 142px;
@@ -66,14 +75,18 @@
   border-width: 5px;
   border-color: white;
   border-radius: 15px !important; */
-  padding: 30px !important;
+  padding: 35px !important;
   transform: none !important;
+}
+.dialog-title {
+  font-family: "Laila-Regular";
+  font-size: 18px;
 }
 
 .dialog-text {
   color: white;
   font-family: "Laila-Light";
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .list-enter-active,
