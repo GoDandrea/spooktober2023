@@ -39,6 +39,7 @@ first_choice:
   set data.shadow.cssClass shadow
 
   var choice1 (run influenced_dialogue "mother" "Yep")
+  var choice2 (run influenced_dialogue "boyfriend" "Fo'Sho!")
   choice:
     think protag idle "Should I fear the old blood?"
     "%{$choice1}":
@@ -47,7 +48,7 @@ first_choice:
       add_stat mother_influence +10
       think protag idle "Must succumb to mother"
       jump first_choice
-    "<p class='choice boyfriend'>Fo'Sho!</p>":
+    "%{$choice2}":
       clear_dialog
       wait 100
       add_stat mother_influence +10
