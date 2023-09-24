@@ -63,10 +63,10 @@ characters:
       rage: mother-rage.png
       dark: mother-dark.png
     style:
-      color: "#ab574e"
+      color: "#cd6961"
       boxCss:
         right: 30%
-        bottom: 6%
+        bottom: 7%
     name: Mother
   ex_bf:
     sprites:
@@ -75,5 +75,5 @@ characters:
       color: "#5a486c"
       boxCss:
         right: 30%
-        bottom: 6%
+        bottom: 7%
     name: Ex

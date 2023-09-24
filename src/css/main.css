@@ -7,6 +7,13 @@
   src: url("public/fonts/Laila-Light.ttf") format("woff2");
 }
 
+@font-face {
+  font-family: "Laila-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("public/fonts/Laila-Regular.ttf") format("woff2");
+}
+
 #app {
   /* Customise CSS variables here. They will override the existing narrat ones. You can also add your own variables */
   --bg-color: #131720;
@@ -47,33 +54,43 @@
 }
 
 .dialog {
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: absolute !important;
   background: none !important;
   border: none !important;
   box-shadow: none !important;
-  width: 100% !important;
-  height: 100% !important;
-  bottom: 0 !important;
-  right: 0 !important;
+}
+
+.dialog-container {
+  justify-content: flex-start;
 }
 
 .dialog-box {
-  background-color: black;
-  position: absolute;
+  background-image: url("img/ui/dialog-box-maroon4.png");
+  background-size: cover;
+  border-radius: 4px !important;
+  position: fixed;
   width: 35%;
   height: 142px;
+  /* background-color: black;
   border-width: 5px;
   border-color: white;
-  padding: 20px !important;
-  border-radius: 15px !important;
+  border-radius: 15px !important; */
+  padding: 35px !important;
+  transform: none !important;
+}
+.dialog-title {
+  font-family: "Laila-Regular";
+  font-size: 18px;
 }
 
 .dialog-text {
   color: white;
   font-family: "Laila-Light";
-  font-size: 22px;
+  font-size: 18px;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: unset;
 }
 
 .dialog-picture {
@@ -94,4 +111,8 @@
   bottom: 1%;
   left: 1%;
   z-index: 999;
+}
+
+.hud-stat {
+  visibility: hidden;
 }

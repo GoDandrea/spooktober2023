@@ -12,9 +12,9 @@ main:
       jump goToPrototype
 
 cabeçaUpTo:
-  talk helper idle "An exploration of character voices. The Protagonist and her Ex, this time."
+  talk helper idle "A first draft of Mona and Regina's argument. Riveting!"
   talk helper idle "Come and see."
-  jump prototypeProtagExMood
+  jump draftSceneOne
 
 goToPrototype:
   talk helper idle "A person of taste, I see."

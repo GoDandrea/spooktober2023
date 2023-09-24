@@ -1,19 +1,9 @@
-setup_protag:
-  change_player_character protag
-  set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
-  set data.avatar.width 150
-  set data.avatar.height 150
-
-as_protag line:
-  clear_dialog
-  talk protag offscreen "%{$line}"
-  clear_dialog
-
-// Actual start of dialogue
 prototypeStart:
+  empty_sprites
   clear_dialog
   play music ambience_1
   play sound ambience_2
+  change_theme default
   set_screen kitchen 0 fade 2000 2000
 
   run setup_protag
@@ -43,30 +33,37 @@ first_choice:
   empty_sprites
   clear_dialog
   change_theme choices
+  set_screen kitchen
   set data.shadow (create_sprite img/characters/mother-dark.png 225)
   set data.shadow.bottom 0
   set data.shadow.cssClass shadow
 
+  var choice1 (run influenced_dialogue "mother" "Yep")
   choice:
     think protag idle "Should I fear the old blood?"
-    "Yep":
-      add_stat mother_influence +10
+    "%{$choice1}":
       clear_dialog
+      wait 100
+      add_stat mother_influence +10
       think protag idle "Must succumb to mother"
       jump first_choice
-    "Fo'Sho!":
-      add_stat mother_influence +10
+    "<p class='choice boyfriend'>Fo'Sho!</p>":
       clear_dialog
+      wait 100
+      add_stat mother_influence +10
       think protag idle "Mother knows best"
       jump first_choice
-    "Nope":
-      add_stat mother_influence -10
+    "<p class=choice>Nope</p>":
       clear_dialog
+      wait 100
+      add_stat mother_influence -10
       jump francamente
 
 francamente:
+  clear_dialog
   empty_sprites
   change_theme default
+  set_screen kitchen
   run setup_protag
   
   talk mother idle "HAHhaHAHAHhahHAHHa"
