@@ -64,7 +64,7 @@
 }
 
 .dialog-box {
-  background-image: url("img/ui/dialog-box-maroon4.png");
+  background-image: url("public/img/ui/tall-panel.png");
   background-size: cover;
   border-radius: 4px !important;
   position: fixed;
