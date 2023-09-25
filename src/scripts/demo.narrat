@@ -2,8 +2,8 @@ main:
   "You open the narrat demo and wonder what narrat is and how it works"
   choice:
     talk helper idle "Would you like some help?"
-    "Yes, please":
-      jump askForHelp
+    "Talk to ex_bf":
+      jump callExStart
     "No, I don't want help 😡"
       jump dontAskForHelp
     "What has Cabeça been up to?"
