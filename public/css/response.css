@@ -13,7 +13,7 @@
   position: fixed;
   right: 40% !important;
   left: auto !important;
-  top: 35% !important;
+  top: 30% !important;
   width: 38%;
 }
 
@@ -24,7 +24,7 @@
   color: transparent;
   font-size: 0px;
   display: block;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .dialog-choices > *:first-child {

@@ -1,10 +1,10 @@
 .dialog-box {
   position: fixed;
-  left: 50% !important;
+  left: 51.5% !important;
   top: 20% !important;
   height: 75px;
   margin-top: 0px !important;
-  width: 38%;
+  width: 35%;
   padding: 24px 40px 24px 40px !important;
 }
 
@@ -12,7 +12,7 @@
   position: fixed;
   left: 50% !important;
   right: auto !important;
-  top: 35% !important;
+  top: 32% !important;
   width: 38%;
 }
 
@@ -23,7 +23,7 @@
   color: transparent;
   font-size: 0px;
   display: block;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .dialog-choices > *:first-child {
