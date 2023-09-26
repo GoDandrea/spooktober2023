@@ -1,0 +1,18 @@
+callExStart:
+  // Just setup, no dialogue
+  empty_sprites
+  clear_dialog
+  play music ambience_1
+  play sound ambience_2
+  change_theme default
+  set_screen beach 0 fade 2000 2000
+
+  run setup_protag
+
+  jump callExIntroduction
+
+callExIntroduction:
+// Dialogue begins
+  talk ex_bf pout_down "Relax, Mona"
+  run as_protag "I don't want to relax."
+  run as_protag "I want to fix this mess and..."

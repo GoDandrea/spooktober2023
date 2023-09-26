@@ -6,7 +6,7 @@ screens:
   kitchen:
     background: img/backgrounds/kitchen.png
   beach:
-    background: img/backgrounds/beach.png
+    background: img/backgrounds/beach_02.png
   map:
     background: img/backgrounds/map.webp
     buttons:
