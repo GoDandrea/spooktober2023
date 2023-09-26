@@ -53,12 +53,38 @@ first_choice:
       wait 100
       add_stat mother_influence +10
       think protag idle "Mother knows best"
-      jump first_choice
-    "<p class=choice>Nope</p>":
+      jump resposta
+    "<p class=choice>Nope. This choice is quite long indeed.</p>":
       clear_dialog
       wait 100
       add_stat mother_influence -10
       jump francamente
+
+resposta:
+  empty_sprites
+  clear_dialog
+  change_theme default
+  set_screen kitchen
+
+  talk mother idle "..."
+  talk mother idle "Preciso de uma resposta agora!"
+
+  change_theme response
+
+  var choice1 (run influenced_dialogue "" "Vai ser A")
+  var choice2 (run influenced_dialogue "boyfriend" "Vai ser B")
+  var choice3 (run influenced_dialogue "" "Vai ser C")
+  choice:
+    talk mother idle "E aí, qual vai ser?"
+    "%{$choice1}":
+      clear_dialog
+      jump resposta
+    "%{$choice2}":
+      clear_dialog
+      jump resposta
+    "%{$choice3}":
+      clear_dialog
+      jump resposta
 
 francamente:
   clear_dialog

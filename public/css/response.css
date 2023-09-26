@@ -1,0 +1,32 @@
+.dialog-box {
+  background-image: url("public/img/ui/short-panel.png");
+  position: fixed;
+  right: 40% !important;
+  left: auto !important;
+  top: 20% !important;
+  height: 75px;
+  margin-top: 0px !important;
+  width: 38%;
+}
+
+.dialog-choices {
+  position: fixed;
+  right: 40% !important;
+  left: auto !important;
+  top: 35% !important;
+  width: 38%;
+}
+
+.dialog-choice,
+.dialog-choice .selected,
+.dialog-choice:hover {
+  background-color: transparent !important;
+  color: transparent;
+  font-size: 0px;
+  display: block;
+  margin-top: 10px;
+}
+
+.dialog-choices > *:first-child {
+  margin-top: 0px;
+}
