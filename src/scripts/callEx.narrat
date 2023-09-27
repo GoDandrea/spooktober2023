@@ -1,0 +1,29 @@
+callExStart:
+  // Just setup, no dialogue
+  empty_sprites
+  clear_dialog
+  play music ambience_1
+  play sound ambience_2
+  change_theme default
+  set_screen kitchen 0 fade 2000 2000
+
+  run setup_protag
+
+  jump callExScene
+
+callExScene:
+
+// Pode começar com ele chamando ela ou o contrário
+  talk ex_bf right_down "Hey, I need to talk to you."
+  run as_protag "What do you want?"
+  talk ex_bf right_down "I want to talk."
+  run as_protag "We have nothing left to talk about."
+  run as_protag "You just need to give me back my things."
+  talk ex_bf right_down "What things?"
+  run as_protag "The things I left at your house. The bracelet, the earrings..."
+  run as_protag "I want them back."
+  talk ex_bf right_down "Wow, I didn't even see it here..."
+  talk ex_bf right_down "But it's been a mess since the last time we saw each other."
+  run as_protag "Then try and find it."
+  talk ex_bf right_down "Okay, if that's what you want..."
+  talk ex_bf right_down "Meet me on the beach tomorrow and I'll give it back to you."
