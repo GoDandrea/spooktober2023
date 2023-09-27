@@ -13,6 +13,75 @@ callExStart:
 
 callExIntroduction:
 // Dialogue begins
+  run as_protag "Are you sure it was a good idea to come to the beach?"
+  run as_protag "The weather doesn't look good today. I think it's going to rain."
+  talk ex_bf right_down "Relax, it's just a few gray clouds..."
+  run as_protag "a lot of gray clouds." // Posso fazer um choice disso aqui
+  talk ex_bf pout_up "But there's no need to be stressed about it."
+  talk ex_bf pout_up "I know what will make you relax. Food."
+
+  choice:
+    talk ex_bf pout_up "I'll order that portion of fried fish we always eat."
+    "Do whatever you want." // Deflect
+      run as_protag "Do whatever you want. I don't care."
+      talk ex_bf right_down "Are things going to be like this now?"
+      talk ex_bf glass_down "Anyway, I'll be right back."
+    "Go on, a little food is always good." // Accept
+      run as_protag "Ask for that special sauce too."
+      talk ex_bf glass_down "I knew it would cheer you up!"
+      talk ex_bf glass_down "I'll be right back."
+    "No. Let's be quick." // Reject
+      run as_protag "I don't want to. Let's sort this out quickly."
+      talk ex_bf scared_down "But why be like that? I'm just trying to help."
+      talk ex_bf glass_down "Anyway, I'll be right back."
+  
+  // Essa sequencia pode virar um think
+  run as_protag "Damn... I can't believe he actually went to get the food."
+  run as_protag "It's always like this, postponing the problems that need to be solved."
+  run as_protag "At least the breeze is very good today..."
+  run as_protag "and that sound of the sea, it's so good."
+  run as_protag "Wow, but what are those things?"
+
+  talk ex_bf glass_down "Now we have food!"
+  talk ex_bf glass_down "Were you looking at those things? Weird, right?"
+  talk ex_bf dontcare_down "It looks like they started appearing this morning."
+  talk ex_bf dontcare_down "They look like dead sea creatures..."
+  talk ex_bf dontcare_down "And they seem to be piling up on the beach."
+  talk ex_bf dontcare_down "In all these years I had never seen anything like this."
+  
+  run as_protag "Yes, these are really strange things. But let's talk about what matters."
+  run as_protag "You said you needed to talk to me about something important. And I need my things back. Where is it?"
+  talk ex_bf dontcare_down "They're here. It's everything you left back at my house. The bracelet, the ring, the credit card..."
+  run as_protag "I can't believe I left that card with you!"
+  run as_protag "I hope you haven't used it, because you'll pay for what you've used."
+  talk ex_bf dontcare_down "Relax, I just used it for the food I'd just picked up for us."
+  run as_protag "Look, you're unbelievable!"
+  talk ex_bf dontcare_down "But..."
+  run as_protag "Look, that's enough. I've had enough of you getting into mischief and acting like a child."
+  run as_protag "You know I can't spend money. I'm not going to spend it on snacks on the beach and...."
+  talk ex_bf scared_down "Me acting like a child?"
+  talk ex_bf scared_down "You acting like a mother. Like YOUR mother!"
+  talk ex_bf scared_down "Deep down you're just as annoying as she is, always wanting to control me, tell me what I should or shouldn't do."
+  run as_protag "I don't act like my mother, it's you who act like a child and put me in this position!"
+  talk ex_bf scared_up "Okay, but I'm not asking for it!"
+  talk ex_bf scared_down "I wanted to live with you together, to have a life with you."
+  talk ex_bf dontcare_down "We are young! I want to live and enjoy things."
+  talk ex_bf dontcare_down "Sometimes I just wished I could spend the day with you and not have to think about the future all the time."
+
+  
+  // Climax
   talk ex_bf pout_down "Relax, Mona"
   run as_protag "I don't want to relax."
   run as_protag "I want to fix this mess and..."
+
+  choice:
+    talk ex_bf pout_up "And... ???"
+    "Never having to look at you again.": // Reject
+      run as_protag "Never having to look at you again."
+      talk ex_bf scared_up "What???"
+      talk ex_bf scared_down "Don't say that. "
+    "I don't know..." // Deflect
+      run as_protag "I don't know..."
+    "Talk about our future." // Accept
+      run as_protag "Talk about our future."
+  
