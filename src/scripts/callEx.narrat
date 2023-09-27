@@ -26,10 +26,10 @@ callExIntroduction:
       run as_protag "..." // Deflect
 
   talk ex_bf pout_up "But there's no need to be stressed about it."
-  talk ex_bf pout_up "Let's relax with some food."
+  talk ex_bf pout_down "Let's relax with some food."
 
   choice:
-    talk ex_bf pout_up "I'll order that portion of fried fish we always eat."
+    talk ex_bf right_down "I'll order that portion of fried fish we always eat."
     "Do whatever you want." // Deflect
       run as_protag "Do whatever you want. I don't care."
       talk ex_bf right_down "Are things going to be like this now?"
@@ -56,42 +56,42 @@ callExIntroduction:
   talk ex_bf glass_down "Ah, so you're looking at those strange things."
   talk ex_bf dontcare_down "It looks like they started appearing like a plague this morning..."
   talk ex_bf dontcare_down "piling up all over the beach."
-  talk ex_bf dontcare_down "They're like... lost beings from the sea."
+  talk ex_bf dontcare_up "They're like... lost beings from the sea."
   run as_protag "They look like these little things growing on me."
-  talk ex_bf glass_down "Yeah, it's similar."
-  talk ex_bf glass_down "You know what? I think these little things from the sea are very pretty."
+  talk ex_bf pout_down "Yeah, it's similar."
+  talk ex_bf pout_up "You know what? I think these little things from the sea are very pretty."
   
   // First Round - The Credit Card
   run as_protag "Yes, ok. But let's talk about what matters."
   run as_protag "You said you needed to talk to me about something important. And I need my things back."
-  talk ex_bf dontcare_down "They're here. It's everything you left back at my house."
+  talk ex_bf right_down "They're here. It's everything you left back at my house."
   talk ex_bf dontcare_down "The bracelet, the ring, the credit card..."
   run as_protag "I can't believe I left that card with you!"
   run as_protag "My head is a mess with the relocation. How could I forget that?"
   run as_protag "I hope you haven't used it, because you'll pay for what you've used."
-  talk ex_bf dontcare_down "Relax, I just used it for the food I'd just picked up for us."
+  talk ex_bf scared_up "Relax, I just used it for the food I'd just picked up for us."
 
   // Second Round - Revelation
   run as_protag "I can't believe you did that!"
   talk ex_bf dontcare_up "Relax, Mona."
   run as_protag "Okay, what did you want to talk about that was so important?"
-  talk ex_bf dontcare_down "I've been thinking a lot these days..."
-  talk ex_bf dontcare_down "Everything we've lived through here on this beach..."
+  talk ex_bf pout_down "I've been thinking a lot these days..."
+  talk ex_bf right_down "Everything we've lived through here on this beach..."
   talk ex_bf dontcare_down "I still like you, Mona and I know you still like me too."
   run as_protag "..."
   play sound thunder
-  talk ex_bf dontcare_down "I know your mother gets you down and all..."
+  talk ex_bf pout_down "I know your mother gets you down and all..."
   talk ex_bf dontcare_up "If you could just, like, get out of that stupid job where Maric works..."
 
   // Climax I
   run as_protag "OMG, you're unbelievable!"
-  talk ex_bf dontcare_down "What???"
+  talk ex_bf scared_up "What???"
   run as_protag "Look, that's enough! I've had enough of you trying to control me."
-  talk ex_bf dontcare_down "This is not control."
+  talk ex_bf scared_down "This is not control."
   run as_protag "You know I need this job. I'm not leaving because of your stupid jealousy."
-  talk ex_bf scared_down "But you know that Maric and I never got along and now you're going to work with him?"
+  talk ex_bf scared_up "But you know that Maric and I never got along and now you're going to work with him?"
   run as_protag "I don't work with him, we're just colleagues. Stop acting like a child!"
-  talk ex_bf scared_down "Me acting like a child?"
+  talk ex_bf scared_up "Me acting like a child?"
   talk ex_bf scared_down "You who is always acting like a mother. Like YOUR mother!"
   talk ex_bf scared_down "Deep down you're just as annoying as she is..."
 
@@ -105,16 +105,16 @@ callExIntroduction:
     "..." // Deflect
       run as_protag "..."
   
-  talk ex_bf scared_down "I wanted to live with you together, to have a life with you."
+  talk ex_bf right_down "I wanted to live with you together, to have a life with you."
   talk ex_bf dontcare_down "Sometimes I just wished I could spend the day with you and not have to think about the future all the time."
   talk ex_bf scared_down "But you're always so annoying!"
   run as_protag "How can you... WTF"
   run as_protag "Why are these weird things from the sea accumulating on my foot?"
   run as_protag "Get out, get out, get out..."
-  talk ex_bf scared_down "They're just a few starfish..."
+  talk ex_bf dontcare_down "They're just a few starfish..."
 
   // Ending
-  talk ex_bf pout_down "Relax, Mona"
+  talk ex_bf dontcare_up "Relax, Mona"
   run as_protag "I don't want to relax."
   run as_protag "I want to fix this mess and..."
 
@@ -131,9 +131,15 @@ callExIntroduction:
       run as_protag "I don't know..."
       talk ex_bf pout_down "You know. We were made for each other."
       talk ex_bf pout_down "Deep down in your heart you know that we complete each other."
-      run as_protag "Right, I need to go."
+      run as_protag "It's going to rain and I need to go home."
+      run as_protag "Goodbye."
     "Talk about our future." // Accept
-      run as_protag "Talk about our future."
+      run as_protag "I think we still have things to talk about..."
+      run as_protag "our future."
+      run as_protag "But not today, it's going to rain and I have to go home."
+      talk ex_bf pout_glass "See you soon, Mona."
+      run as_protag "See you soon, Dylan."
+
   
 
   
