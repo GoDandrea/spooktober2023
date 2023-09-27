@@ -2,7 +2,7 @@ callExStart:
   // Just setup, no dialogue
   empty_sprites
   clear_dialog
-  play music ambience_1
+  play music ambience_beach
   play sound ambience_2
   change_theme default
   set_screen beach 0 fade 2000 2000
@@ -15,10 +15,18 @@ callExIntroduction:
 // Dialogue begins
   run as_protag "Are you sure it was a good idea to come to the beach?"
   run as_protag "The weather doesn't look good today. I think it's going to rain."
-  talk ex_bf right_down "Relax, it's just a few gray clouds..."
-  run as_protag "a lot of gray clouds." // Posso fazer um choice disso aqui
+
+  choice:
+    talk ex_bf right_down "Relax, it's just a few gray clouds..."
+    "A lot of gray clouds..." // Reject
+      run as_protag "a lot of gray clouds..."
+    "Yeah, maybe you're right."
+      run as_protag "Ok, you're right." // Accept
+    "If that's what you think"
+      run as_protag "..." // Deflect
+
   talk ex_bf pout_up "But there's no need to be stressed about it."
-  talk ex_bf pout_up "I know what will make you relax. Food."
+  talk ex_bf pout_up "Let's relax with some food."
 
   choice:
     talk ex_bf pout_up "I'll order that portion of fried fish we always eat."
@@ -37,51 +45,95 @@ callExIntroduction:
   
   // Essa sequencia pode virar um think
   run as_protag "Damn... I can't believe he actually went to get the food."
-  run as_protag "It's always like this, postponing the problems that need to be solved."
+  run as_protag "It's always like this."
+  run as_protag "Aff..."
   run as_protag "At least the breeze is very good today..."
-  run as_protag "and that sound of the sea, it's so good."
+  run as_protag "and the sound of the sea, it's better than the silence in that apartment."
   run as_protag "Wow, but what are those things?"
 
-  talk ex_bf glass_down "Now we have food!"
-  talk ex_bf glass_down "Were you looking at those things? Weird, right?"
-  talk ex_bf dontcare_down "It looks like they started appearing this morning."
-  talk ex_bf dontcare_down "They look like dead sea creatures..."
-  talk ex_bf dontcare_down "And they seem to be piling up on the beach."
-  talk ex_bf dontcare_down "In all these years I had never seen anything like this."
+  // Ambientando
+  talk ex_bf glass_down "Tasty food is comiiing!"
+  talk ex_bf glass_down "Ah, so you're looking at those strange things."
+  talk ex_bf dontcare_down "It looks like they started appearing like a plague this morning..."
+  talk ex_bf dontcare_down "piling up all over the beach."
+  talk ex_bf dontcare_down "They're like... lost beings from the sea."
+  run as_protag "They look like these little things growing on me."
+  talk ex_bf glass_down "Yeah, it's similar."
+  talk ex_bf glass_down "You know what? I think these little things from the sea are very pretty."
   
-  run as_protag "Yes, these are really strange things. But let's talk about what matters."
-  run as_protag "You said you needed to talk to me about something important. And I need my things back. Where is it?"
-  talk ex_bf dontcare_down "They're here. It's everything you left back at my house. The bracelet, the ring, the credit card..."
+  // First Round - The Credit Card
+  run as_protag "Yes, ok. But let's talk about what matters."
+  run as_protag "You said you needed to talk to me about something important. And I need my things back."
+  talk ex_bf dontcare_down "They're here. It's everything you left back at my house."
+  talk ex_bf dontcare_down "The bracelet, the ring, the credit card..."
   run as_protag "I can't believe I left that card with you!"
+  run as_protag "My head is a mess with the relocation. How could I forget that?"
   run as_protag "I hope you haven't used it, because you'll pay for what you've used."
   talk ex_bf dontcare_down "Relax, I just used it for the food I'd just picked up for us."
-  run as_protag "Look, you're unbelievable!"
-  talk ex_bf dontcare_down "But..."
-  run as_protag "Look, that's enough. I've had enough of you getting into mischief and acting like a child."
-  run as_protag "You know I can't spend money. I'm not going to spend it on snacks on the beach and...."
-  talk ex_bf scared_down "Me acting like a child?"
-  talk ex_bf scared_down "You acting like a mother. Like YOUR mother!"
-  talk ex_bf scared_down "Deep down you're just as annoying as she is, always wanting to control me, tell me what I should or shouldn't do."
-  run as_protag "I don't act like my mother, it's you who act like a child and put me in this position!"
-  talk ex_bf scared_up "Okay, but I'm not asking for it!"
-  talk ex_bf scared_down "I wanted to live with you together, to have a life with you."
-  talk ex_bf dontcare_down "We are young! I want to live and enjoy things."
-  talk ex_bf dontcare_down "Sometimes I just wished I could spend the day with you and not have to think about the future all the time."
 
+  // Second Round - Revelation
+  run as_protag "I can't believe you did that!"
+  talk ex_bf dontcare_up "Relax, Mona."
+  run as_protag "Okay, what did you want to talk about that was so important?"
+  talk ex_bf dontcare_down "I've been thinking a lot these days..."
+  talk ex_bf dontcare_down "Everything we've lived through here on this beach..."
+  talk ex_bf dontcare_down "I still like you, Mona and I know you still like me too."
+  run as_protag "..."
+  play sound thunder
+  talk ex_bf dontcare_down "I know your mother gets you down and all..."
+  talk ex_bf dontcare_up "If you could just, like, get out of that stupid job where Maric works..."
+
+  // Climax I
+  run as_protag "OMG, you're unbelievable!"
+  talk ex_bf dontcare_down "What???"
+  run as_protag "Look, that's enough! I've had enough of you trying to control me."
+  talk ex_bf dontcare_down "This is not control."
+  run as_protag "You know I need this job. I'm not leaving because of your stupid jealousy."
+  talk ex_bf scared_down "But you know that Maric and I never got along and now you're going to work with him?"
+  run as_protag "I don't work with him, we're just colleagues. Stop acting like a child!"
+  talk ex_bf scared_down "Me acting like a child?"
+  talk ex_bf scared_down "You who is always acting like a mother. Like YOUR mother!"
+  talk ex_bf scared_down "Deep down you're just as annoying as she is..."
+
+  choice:
+    talk ex_bf scared_down "always trying to make others feel guilty. You think you own the world! "
+    "Okay, maybe you're right." // Accept
+      run as_protag "I'm sorry, I didn't mean to make you feel this way."
+    "What??? I don't act like my mother." // Reject
+      run as_protag "I don't act like my mother, it's you who act like a child and put me in this position!"
+      talk ex_bf scared_up "Okay, but I'm not asking for it!"
+    "..." // Deflect
+      run as_protag "..."
   
-  // Climax
+  talk ex_bf scared_down "I wanted to live with you together, to have a life with you."
+  talk ex_bf dontcare_down "Sometimes I just wished I could spend the day with you and not have to think about the future all the time."
+  talk ex_bf scared_down "But you're always so annoying!"
+  run as_protag "How can you... WTF"
+  run as_protag "Why are these weird things from the sea accumulating on my foot?"
+  run as_protag "Get out, get out, get out..."
+  talk ex_bf scared_down "They're just a few starfish..."
+
+  // Ending
   talk ex_bf pout_down "Relax, Mona"
   run as_protag "I don't want to relax."
   run as_protag "I want to fix this mess and..."
 
+  // This is the final and most important choice.
   choice:
     talk ex_bf pout_up "And... ???"
     "Never having to look at you again.": // Reject
       run as_protag "Never having to look at you again."
       talk ex_bf scared_up "What???"
       talk ex_bf scared_down "Don't say that. "
+      run as_protag "Yes, I do. It was already over. There's nothing more to talk about."
+      run as_protag "Goodbye."
     "I don't know..." // Deflect
       run as_protag "I don't know..."
+      talk ex_bf pout_down "You know. We were made for each other."
+      talk ex_bf pout_down "Deep down in your heart you know that we complete each other."
+      run as_protag "Right, I need to go."
     "Talk about our future." // Accept
       run as_protag "Talk about our future."
+  
+
   

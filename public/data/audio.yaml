@@ -15,12 +15,18 @@ files:
   kitchen:
     loop: false
     src: music/yahaveva-kitchen.mp3
+  thunder:
+    loop: false
+    src: audio/thunder.wav
   ambience_1:
     loop: true
     src: music/klankbeeld-roomtone.mp3
   ambience_2:
     loop: true
     src: music/grimmreapersounds-bass.mp3
+  ambience_beach:
+    loop: true
+    src: music/beach_ambience_short.wav
 options:
   volume: 0.5
   musicFadeInTime: 0.5
