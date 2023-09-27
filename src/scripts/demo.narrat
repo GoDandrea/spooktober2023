@@ -3,7 +3,7 @@ main:
   choice:
     talk helper idle "Would you like some help?"
     "Talk to ex_bf":
-      jump callExStart
+      jump beachStart
     "No, I don't want help 😡"
       jump dontAskForHelp
     "What has Cabeça been up to?"

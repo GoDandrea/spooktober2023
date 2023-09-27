@@ -1,4 +1,4 @@
-callExStart:
+beachStart:
   // Just setup, no dialogue
   empty_sprites
   clear_dialog
@@ -9,9 +9,9 @@ callExStart:
 
   run setup_protag
 
-  jump callExIntroduction
+  jump beachScene
 
-callExIntroduction:
+beachScene:
 // Dialogue begins
   run as_protag "Are you sure it was a good idea to come to the beach?"
   run as_protag "The weather doesn't look good today. I think it's going to rain."
