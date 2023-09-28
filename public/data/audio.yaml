@@ -27,6 +27,9 @@ files:
   ambience_beach:
     loop: true
     src: music/beach_ambience_short.wav
+  song_ex:
+    loop: true
+    src: music/song_ex.ogg
 options:
   volume: 0.5
   musicFadeInTime: 0.5

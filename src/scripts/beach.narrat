@@ -2,7 +2,7 @@ beachStart:
   // Just setup, no dialogue
   empty_sprites
   clear_dialog
-  play music ambience_beach
+  play music song_ex
   play sound ambience_2
   change_theme default
   set_screen beach 0 fade 2000 2000

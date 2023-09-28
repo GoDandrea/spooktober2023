@@ -11,19 +11,64 @@ callExStart:
 
   jump callExScene
 
-callExScene:
+  // Whe can make it start with he calling her or she calling him and make
+  // two different starts
 
-// Pode começar com ele chamando ela ou o contrário
-  talk ex_bf right_down "Hey, I need to talk to you."
+callExScene:
+  talk ex_bf right_down "Mona, I need to talk to you."
   run as_protag "What do you want?"
   talk ex_bf right_down "I want to talk."
   run as_protag "We have nothing left to talk about."
-  run as_protag "You just need to give me back my things."
+  run as_protag "You just need to give me back my things and after that it's over."
   talk ex_bf right_down "What things?"
   run as_protag "The things I left at your house. The bracelet, the earrings..."
-  run as_protag "I want them back."
-  talk ex_bf right_down "Wow, I didn't even see it here..."
+  run as_protag "I need them back."
+  talk ex_bf right_down "Wow, I didn't even see these things here..."
   talk ex_bf right_down "But it's been a mess since the last time we saw each other."
-  run as_protag "Then try and find it."
-  talk ex_bf right_down "Okay, if that's what you want..."
-  talk ex_bf right_down "Meet me on the beach tomorrow and I'll give it back to you."
+  run as_protag "Yes, I can imagine. But try to find them."
+  talk ex_bf right_down "Okay, if it's what you want..."
+  talk ex_bf right_down "Then I can take them to the beach for you."
+  run as_protag "Why do you want to meet me on the beach?"
+  talk ex_bf right_down "Because that's where it all began..."
+  talk ex_bf right_down "and I think that after we broke up, we never really had a chance to talk."
+
+  choice:
+    talk ex_bf right_down "We've experienced very good things together"
+    "..." // Deflect
+      talk ex_bf right_down "You know it..."
+    "Good days..." // Accept
+      run as_protag "Yes, we had good days on that beach."
+      talk ex_bf right_down "Yeah..."
+    "Bad things too" // Reject
+      run as_protag "Bad things too."
+      talk ex_bf right_down "Yeah, bad things too"
+  
+  talk ex_bf right_down "And I think we need a chance to talk after everything."
+  run as_protag "I don't know..."
+  talk ex_bf right_down "Please Mona, I promise it will be quick."
+  talk ex_bf right_down "Anyway, I need to give you back your bracelet and earrings."
+  talk ex_bf right_down "We solve both things."
+  run as_protag "I don't know if I'm well enough to go out tomorrow."
+  talk ex_bf right_down "Is it your mother again?"
+  talk ex_bf right_down "That witch always gets you down!"
+
+  choice:
+    talk ex_bf right_down "What happened this time?"
+    "I don't want to talk to you about it." // Reject
+      run as_protag "It's not your business."
+    "The same as always." // Accept
+      run as_protag "She just get crazy, as usual."
+    "It doesn't matter anymore." // Deflect
+      run as_protag "It doesn't matter, it's been resolved."
+  
+  run as_protag "Anyway, I need to go."
+  talk ex_bf right_down "We'll meet tomorrow at 8am on the beach then?"
+  run as_protag "If it's the only way to get my stuff back..."
+  talk ex_bf right_down "All right, see you tomorrow Mona."
+  run as_protag "Bye."
+
+  // Turn it a Think
+  run as_protag "Damn, now I have to meet Dylan tomorrow..."
+  //run as_protag "I just want some peace."
+  //run as_protag ""
+
