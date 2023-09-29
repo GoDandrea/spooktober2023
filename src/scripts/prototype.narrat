@@ -38,7 +38,7 @@ first_choice:
   set data.shadow.bottom 0
   set data.shadow.cssClass shadow
 
-  var choice1 (run influenced_dialogue "mother" "Yep")
+  var choice1 (run influenced_dialogue "friend" "Yep")
   var choice2 (run influenced_dialogue "boyfriend" "Fo'Sho!")
   choice:
     think protag idle "Should I fear the old blood?"
@@ -66,16 +66,18 @@ resposta:
   change_theme default
   set_screen mother_house
 
-  talk mother idle "..."
+  talk mother offended "..."
   talk mother idle "Preciso de uma resposta agora!"
+
+  clear_dialog
 
   change_theme response
 
   var choice1 (run influenced_dialogue "" "Vai ser A")
   var choice2 (run influenced_dialogue "boyfriend" "Vai ser B")
-  var choice3 (run influenced_dialogue "" "Vai ser C")
+  var choice3 (run influenced_dialogue "friend" "Vai ser C")
   choice:
-    talk mother idle "E aí, qual vai ser?"
+    talk mother offended "É àí, quãl vâi sër?"
     "%{$choice1}":
       clear_dialog
       jump resposta

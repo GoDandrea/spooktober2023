@@ -62,10 +62,11 @@ characters:
       idle: mother.png
       rage: mother-rage.png
       dark: mother-dark.png
+      offended: mother-offended.png
     style:
       color: "#cd6961"
       boxCss:
-        right: 30%
+        right: 45%
         bottom: 7%
     name: Mother
   ex_bf:
@@ -84,6 +85,6 @@ characters:
     style:
       color: "#5a486c"
       boxCss:
-        right: 50%
+        right: 45%
         bottom: 7%
     name: Ex

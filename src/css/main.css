@@ -77,9 +77,9 @@
 
 .dialog-picture {
   position: absolute;
-  right: 100px !important;
-  bottom: 0px !important;
-  height: 90% !important;
+  right: -10px !important;
+  bottom: -30px !important;
+  height: 96% !important;
   width: auto !important;
   border: none !important;
   border-radius: 0 !important;
@@ -115,12 +115,13 @@
 
 .boyfriend {
   background-image: url("public/img/ui/choice-panel-ex-bf.png");
-  background-size: cover !important;
+  background-size: 99.2%;
 }
 
-.boyfriend {
+.friend {
   background-image: url("public/img/ui/choice-panel-friend.png");
-  background-size: cover !important;
+  background-size: 99.2%;
+  padding: 52px 83px 42px 83px;
 }
 
 .mother {
