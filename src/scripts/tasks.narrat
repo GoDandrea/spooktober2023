@@ -1,0 +1,32 @@
+tasksStart:
+  // Just setup, no dialogue
+  empty_sprites
+  clear_dialog
+  play music ambience_1
+  play sound ambience_2
+  change_theme default
+  set_screen apartment 0 fade 2000 2000
+
+  run setup_protag
+
+  jump tasksScene
+
+tasksScene:
+  // Pensamentos iniciais
+  run as_protag "Finally I can have some peace!"
+  run as_protag "Sometimes Mom seems to drain all my energy."
+  run as_protag "How did I manage to live with her for so long?"
+  run as_protag "I deserve an award for this..."
+
+  // Precisamos arrumar as coisas
+  run as_protag "God, it's a mess in here, isn't it?"
+  run as_protag "The sink full of dishes..."
+  run as_protag "This window making an annoying noise when the wind hits it..."
+  run as_protag "I need to organize these things."
+  run as_protag "Oh gosh, and I still need to call that idiot to get my stuff back. Holy shit!"
+
+  // Realizando as tarefas
+  run as_protag "Okay Mona, you can do it."
+
+  jump callExStart
+

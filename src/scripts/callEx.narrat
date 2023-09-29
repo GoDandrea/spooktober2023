@@ -5,7 +5,7 @@ callExStart:
   play music ambience_1
   play sound ambience_2
   change_theme default
-  set_screen mother_house 0 fade 2000 2000
+  set_screen apartment 0 fade 2000 2000
 
   run setup_protag
 

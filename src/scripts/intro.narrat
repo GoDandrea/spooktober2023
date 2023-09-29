@@ -112,4 +112,4 @@ sceneOneIntroduction:
       run as_protag "Which is why I'm also leaving you behind."
 
   run as_protag "Goodbye."
-  jump callExStart
+  jump tasksStart
