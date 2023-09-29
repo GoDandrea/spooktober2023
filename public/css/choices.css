@@ -1,57 +1,39 @@
 .dialog-box {
   position: fixed;
-  left: 50% !important;
+  left: 51.5% !important;
   top: 20% !important;
-  height: 100px;
+  height: 75px;
   margin-top: 0px !important;
+  width: 35%;
+  padding: 24px 40px 24px 40px !important;
 }
 
 .dialog-choices {
   position: fixed;
   left: 50% !important;
   right: auto !important;
-  top: 40% !important;
-  width: 35%;
+  top: 32% !important;
+  width: 38%;
 }
 
 .dialog-choice,
 .dialog-choice .selected,
 .dialog-choice:hover {
-  width: 100%;
-  height: 100px;
-  background-color: transparent;
+  background-color: transparent !important;
   color: transparent;
   font-size: 0px;
+  display: block;
+  margin-top: 0px;
+}
+
+.dialog-choices > *:first-child {
+  margin-top: 15px;
 }
 
 /* seletor incrível que infelizmente não dá pra usar porque o firefox é retradatário
 .dialog-choice:has(#mother) {
   background-color: #430300;
 } */
-
-.choice {
-  background-image: url("img/ui/dialog-box.png");
-  background-size: cover;
-  padding: 20px !important;
-  width: 100%;
-  height: 100px;
-  color: white;
-  font-size: 16px;
-}
-
-.boyfriend {
-  border-width: 5px;
-  border-color: white;
-  border-radius: 15px !important;
-  background-color: #44135f;
-}
-
-.mother {
-  border-width: 5px;
-  border-color: white;
-  border-radius: 15px !important;
-  background-color: #430300;
-}
 
 .dialog-picture {
   left: 100px !important;

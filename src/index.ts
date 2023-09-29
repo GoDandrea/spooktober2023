@@ -75,4 +75,12 @@ const themes: Theme[] = [
     id: "char-center",
     cssPath: "public/css/char-center.css",
   },
+  {
+    id: "response",
+    cssPath: "public/css/response.css",
+  },
+  {
+    id: "main",
+    cssPath: "src/css/main.css",
+  },
 ];

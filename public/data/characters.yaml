@@ -62,18 +62,29 @@ characters:
       idle: mother.png
       rage: mother-rage.png
       dark: mother-dark.png
+      offended: mother-offended.png
     style:
       color: "#cd6961"
       boxCss:
-        right: 30%
+        right: 45%
         bottom: 7%
     name: Mother
   ex_bf:
     sprites:
-      idle: ex_bf.png
+      dontcare_down: ex_dontcare_down.png
+      dontcare_up: ex_dontcare_up.png
+      glass_down: ex_glass_down.png
+      glass_up: ex_glass_up.png
+      pout_down: ex_pout_down.png
+      pout_glass: ex_pout_glass.png
+      pout_up: ex_pout_up.png
+      right_down: ex_right_down.png
+      right_up: ex_right_up.png
+      scared_down: ex_scared_down.png
+      scared_up: ex_scared_up.png
     style:
       color: "#5a486c"
       boxCss:
-        right: 30%
+        right: 45%
         bottom: 7%
     name: Ex

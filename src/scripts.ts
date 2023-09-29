@@ -1,7 +1,8 @@
-import demo from "./scripts/demo.narrat";
+import beach from "./scripts/beach.narrat";
+import callEx from "./scripts/callEx.narrat";
 import intro from "./scripts/intro.narrat";
-import quest from "./scripts/quest.narrat";
 import prototype from "./scripts/prototype.narrat";
+import tasks from "./scripts/tasks.narrat";
 import utilities from "./scripts/utilities.narrat";
 
-export default [demo, intro, quest, prototype, utilities];
+export default [beach, callEx, intro, prototype, tasks, utilities];

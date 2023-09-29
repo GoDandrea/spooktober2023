@@ -4,7 +4,7 @@ prototypeStart:
   play music ambience_1
   play sound ambience_2
   change_theme default
-  set_screen kitchen 0 fade 2000 2000
+  set_screen mother_house 0 fade 2000 2000
 
   run setup_protag
 
@@ -33,12 +33,12 @@ example_choice:
   empty_sprites
   clear_dialog
   change_theme choices
-  set_screen kitchen
+  set_screen mother_house
   set data.shadow (create_sprite img/characters/mother-dark.png 225)
   set data.shadow.bottom 0
   set data.shadow.cssClass shadow
 
-  var choice1 (run influenced_dialogue "mother" "Yep")
+  var choice1 (run influenced_dialogue "friend" "Yep")
   var choice2 (run influenced_dialogue "boyfriend" "Fo'Sho!")
   choice:
     think protag idle "Should I fear the old blood?"
@@ -53,18 +53,46 @@ example_choice:
       wait 100
       add_stat mother_influence +10
       think protag idle "Mother knows best"
-      jump example_choice
-    "<p class=choice>Nope</p>":
+      jump resposta
+    "<p class=choice>Nope. This choice is quite long indeed.</p>":
       clear_dialog
       wait 100
       add_stat mother_influence -10
       jump francamente
 
+resposta:
+  empty_sprites
+  clear_dialog
+  change_theme default
+  set_screen mother_house
+
+  talk mother offended "..."
+  talk mother idle "Preciso de uma resposta agora!"
+
+  clear_dialog
+
+  change_theme response
+
+  var choice1 (run influenced_dialogue "" "Vai ser A")
+  var choice2 (run influenced_dialogue "boyfriend" "Vai ser B")
+  var choice3 (run influenced_dialogue "friend" "Vai ser C")
+  choice:
+    talk mother offended "É àí, quãl vâi sër?"
+    "%{$choice1}":
+      clear_dialog
+      jump resposta
+    "%{$choice2}":
+      clear_dialog
+      jump resposta
+    "%{$choice3}":
+      clear_dialog
+      jump resposta
+
 francamente:
   clear_dialog
   empty_sprites
   change_theme default
-  set_screen kitchen
+  set_screen mother_house
   run setup_protag
   
   talk mother idle "HAHhaHAHAHhahHAHHa"

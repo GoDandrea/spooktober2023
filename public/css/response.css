@@ -1,0 +1,32 @@
+.dialog-box {
+  position: fixed;
+  right: 53% !important;
+  left: auto !important;
+  top: 20% !important;
+  height: 75px;
+  margin-top: 0px !important;
+  width: 32%;
+  padding: 24px 40px 24px 40px !important;
+}
+
+.dialog-choices {
+  position: fixed;
+  right: 50% !important;
+  left: auto !important;
+  top: 30% !important;
+  width: 38%;
+}
+
+.dialog-choice,
+.dialog-choice .selected,
+.dialog-choice:hover {
+  background-color: transparent !important;
+  color: transparent;
+  font-size: 0px;
+  display: block;
+  margin-top: 0px;
+}
+
+.dialog-choices > *:first-child {
+  margin-top: 15px;
+}

@@ -4,8 +4,8 @@ setup_protag:
   // Sets up Mona's sprite
   change_player_character protag
   set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
-  set data.avatar.width 150
-  set data.avatar.height 150
+  set data.avatar.width 142
+  set data.avatar.height 142
 
 // Says a line as Mona
 as_protag line:
