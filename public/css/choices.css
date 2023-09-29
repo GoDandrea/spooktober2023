@@ -27,7 +27,7 @@
 }
 
 .dialog-choices > *:first-child {
-  margin-top: 0px;
+  margin-top: 15px;
 }
 
 /* seletor incrível que infelizmente não dá pra usar porque o firefox é retradatário
