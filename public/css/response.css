@@ -1,13 +1,11 @@
 .dialog-box {
-  background-image: none;
-  background-color: #000000;
   position: fixed;
-  right: 51.5% !important;
+  right: 53% !important;
   left: auto !important;
   top: 20% !important;
   height: 75px;
   margin-top: 0px !important;
-  width: 35%;
+  width: 32%;
   padding: 24px 40px 24px 40px !important;
 }
 
