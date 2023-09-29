@@ -24,27 +24,8 @@
 }
 
 /* Add any other CSS you want here */
-#viewport-layer-kitchen {
+.viewport-layer-background {
   background-image: url(&quot;img/backgrounds/kitchen.png&quot;);
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-#viewport-layer-background-kitchen {
-  background-image: url(&quot;img/backgrounds/kitchen.png&quot;);
-  background-size: 100% auto;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-#viewport-layer-background-beach {
-  background-image: url(&quot;img/backgrounds/beach.png&quot;);
   background-size: 100% auto;
   position: absolute;
   left: 0px;
@@ -137,6 +118,11 @@
   background-size: cover !important;
 }
 
+.boyfriend {
+  background-image: url("public/img/ui/choice-panel-friend.png");
+  background-size: cover !important;
+}
+
 .mother {
   background-size: 85%;
 }
@@ -152,4 +138,8 @@
 .dialog-choice.selected > .mother {
   background-image: url("public/img/ui/choice-panel-ex-bf-highlighted.png");
   background-size: cover !important;
+}
+
+.dialog-choice.selected > .friend {
+  background-image: url("public/img/ui/choice-panel-friend-highlighted.png");
 }

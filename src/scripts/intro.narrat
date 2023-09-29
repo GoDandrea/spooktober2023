@@ -1,11 +1,11 @@
-draftSceneOne:
+main:
   // Just setup, no dialogue
   empty_sprites
   clear_dialog
   play music ambience_1
   play sound ambience_2
   change_theme default
-  set_screen kitchen 0 fade 2000 2000
+  set_screen mother_house 0 fade 2000 2000
 
   run setup_protag
 
@@ -112,3 +112,4 @@ sceneOneIntroduction:
       run as_protag "Which is why I'm also leaving you behind."
 
   run as_protag "Goodbye."
+  jump callExStart

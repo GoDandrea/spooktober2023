@@ -71,3 +71,5 @@ callExScene:
   run as_protag "Damn, now I have to meet Dylan tomorrow..."
   run as_protag "I just want to watch a movie and sleep."
 
+  jump beachStart
+

@@ -4,7 +4,7 @@ prototypeStart:
   play music ambience_1
   play sound ambience_2
   change_theme default
-  set_screen kitchen 0 fade 2000 2000
+  set_screen mother_house 0 fade 2000 2000
 
   run setup_protag
 
@@ -33,7 +33,7 @@ first_choice:
   empty_sprites
   clear_dialog
   change_theme choices
-  set_screen kitchen
+  set_screen mother_house
   set data.shadow (create_sprite img/characters/mother-dark.png 225)
   set data.shadow.bottom 0
   set data.shadow.cssClass shadow
@@ -64,7 +64,7 @@ resposta:
   empty_sprites
   clear_dialog
   change_theme default
-  set_screen kitchen
+  set_screen mother_house
 
   talk mother idle "..."
   talk mother idle "Preciso de uma resposta agora!"
@@ -90,7 +90,7 @@ francamente:
   clear_dialog
   empty_sprites
   change_theme default
-  set_screen kitchen
+  set_screen mother_house
   run setup_protag
   
   talk mother idle "HAHhaHAHAHhahHAHHa"

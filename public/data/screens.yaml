@@ -3,8 +3,6 @@ screens:
     background: img/backgrounds/curtain.webp
   narrat:
     background: img/backgrounds/narrat.webp
-  kitchen:
-    background: img/backgrounds/kitchen.png
   beach:
     background: img/backgrounds/beach_final.png
   apartment:
