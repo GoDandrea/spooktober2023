@@ -27,9 +27,9 @@ prototypeStart:
   run as_protag "I must take my leave."
   talk mother idle "By the gods, fear it, my daughter."
 
-  jump first_choice
+  jump example_choice
 
-first_choice:
+example_choice:
   empty_sprites
   clear_dialog
   change_theme choices
@@ -47,13 +47,13 @@ first_choice:
       wait 100
       add_stat mother_influence +10
       think protag idle "Must succumb to mother"
-      jump first_choice
+      jump example_choice
     "%{$choice2}":
       clear_dialog
       wait 100
       add_stat mother_influence +10
       think protag idle "Mother knows best"
-      jump first_choice
+      jump example_choice
     "<p class=choice>Nope</p>":
       clear_dialog
       wait 100

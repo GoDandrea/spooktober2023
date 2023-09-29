@@ -35,9 +35,14 @@ hudStats:
     name: Mother Influence
     startingValue: 10
     minValue: 0
-  boyfriend_influence:
+  ex_influence:
     icon: img/ui/money.webp
-    name: Boyfriend Influence
+    name: Ex-boyfriend Influence
+    startingValue: 10
+    minValue: 0
+  friend_influence:
+    icon: img/ui/money.webp
+    name: Friend Influence
     startingValue: 10
     minValue: 0
 saves:

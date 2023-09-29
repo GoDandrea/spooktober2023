@@ -1,4 +1,4 @@
-draftSceneOne:
+introSceneSetUp:
   // Just setup, no dialogue
   empty_sprites
   clear_dialog
@@ -9,13 +9,14 @@ draftSceneOne:
 
   run setup_protag
 
-  jump sceneOneIntroduction
+  jump start_point
 
-sceneOneIntroduction:
+introMainDialogue:
   // Dialogue begins
   talk mother idle "So, that's how it is?"
   run as_protag "Look, mom..."
   
+  //var first (new Array )
   choice:
     talk mother idle "You'll take your things and leave?"
     "...": 
