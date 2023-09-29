@@ -6,7 +6,13 @@ screens:
   kitchen:
     background: img/backgrounds/kitchen.png
   beach:
-    background: img/backgrounds/beach_02.png
+    background: img/backgrounds/beach_final.png
+  apartment:
+    background: img/backgrounds/apartment.png
+  mother_house:
+    background: img/backgrounds/mother_house.png
+  motif_ex:
+    background: img/backgrounds/motif_ex.png
   map:
     background: img/backgrounds/map.webp
     buttons:

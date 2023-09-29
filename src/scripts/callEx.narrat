@@ -5,7 +5,7 @@ callExStart:
   play music ambience_1
   play sound ambience_2
   change_theme default
-  set_screen kitchen 0 fade 2000 2000
+  set_screen mother_house 0 fade 2000 2000
 
   run setup_protag
 
@@ -69,6 +69,5 @@ callExScene:
 
   // Turn it a Think
   run as_protag "Damn, now I have to meet Dylan tomorrow..."
-  //run as_protag "I just want some peace."
-  //run as_protag ""
+  run as_protag "I just want to watch a movie and sleep."
 
