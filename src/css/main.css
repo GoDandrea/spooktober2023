@@ -145,3 +145,13 @@
 .dialog-choice.selected > .friend {
   background-image: url("public/img/ui/choice-panel-friend-highlighted.png");
 }
+
+#game-splash-screen, #game-menu {
+  background-image: url("public/img/backgrounds/apartment.png") !important;
+  background-size: 100%;
+}
+
+#game-title-text {
+  content: 'Metamorphosis' !important;
+  font-size: 5rem;
+}

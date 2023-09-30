@@ -16,29 +16,37 @@ beachScene:
   run as_protag "Are you sure it was a good idea to come to the beach?"
   run as_protag "The weather doesn't look good today. I think it's going to rain."
 
+  change_theme response
   choice:
     talk ex_bf right_down "Relax, it's just a few gray clouds..."
-    "A lot of gray clouds..." // Reject
+    (run wrap_text none "A lot of gray clouds..."): // Reject
+      change_theme default
       run as_protag "a lot of gray clouds..."
-    "Yeah, maybe you're right."
-      run as_protag "Ok, you're right." // Accept
-    "If that's what you think"
-      run as_protag "..." // Deflect
+    (run wrap_text none "Yeah, maybe you're right."): // Accept
+      change_theme default
+      run as_protag "Ok, you're right." 
+    (run wrap_text none "If that's what you think"): // Deflect
+      change_theme default
+      run as_protag "..." 
 
   talk ex_bf pout_up "But there's no need to be stressed about it."
   talk ex_bf pout_down "Let's relax with some food."
 
+  change_theme response
   choice:
     talk ex_bf right_down "I'll order that portion of fried fish we always eat."
-    "Do whatever you want." // Deflect
+    (run wrap_text none "Do whatever you want."): // Deflect
+      change_theme default
       run as_protag "Do whatever you want. I don't care."
       talk ex_bf right_down "Are things going to be like this now?"
       talk ex_bf glass_down "Anyway, I'll be right back."
-    "Go on, a little food is always good." // Accept
+    (run wrap_text none "Go on, a little food is always good."): // Accept
+      change_theme default
       run as_protag "Ask for that special sauce too."
       talk ex_bf glass_down "I knew it would cheer you up!"
       talk ex_bf glass_down "I'll be right back."
-    "No. Let's be quick." // Reject
+    (run wrap_text none "No. Let's be quick."): // Reject
+      change_theme default
       run as_protag "I don't want to. Let's sort this out quickly."
       talk ex_bf scared_down "But why be like that? I'm just trying to help."
       talk ex_bf glass_down "Anyway, I'll be right back."
@@ -95,14 +103,18 @@ beachScene:
   talk ex_bf scared_down "You who is always acting like a mother. Like YOUR mother!"
   talk ex_bf scared_down "Deep down you're just as annoying as she is..."
 
+  change_theme response
   choice:
     talk ex_bf scared_down "always trying to make others feel guilty. You think you own the world! "
-    "Okay, maybe you're right." // Accept
+    (run wrap_text none "Okay, maybe you're right."): // Accept
+      change_theme default
       run as_protag "I'm sorry, I didn't mean to make you feel this way."
-    "What??? I don't act like my mother." // Reject
+    (run wrap_text none "What??? I don't act like my mother."): // Reject
+      change_theme default
       run as_protag "I don't act like my mother, it's you who act like a child and put me in this position!"
       talk ex_bf scared_up "Okay, but I'm not asking for it!"
-    "..." // Deflect
+    (run wrap_text none "..."): // Deflect
+      change_theme default
       run as_protag "..."
   
   talk ex_bf right_down "I wanted to live with you together, to have a life with you."
@@ -119,21 +131,25 @@ beachScene:
   run as_protag "I want to fix this mess and..."
 
   // This is the final and most important choice.
+  change_theme response
   choice:
     talk ex_bf pout_up "And... ???"
-    "Never having to look at you again.": // Reject
+    (run wrap_text none "Never having to look at you again."): // Reject
+      change_theme default
       run as_protag "Never having to look at you again."
       talk ex_bf scared_up "What???"
       talk ex_bf scared_down "Don't say that. "
       run as_protag "Yes, I do. It was already over. There's nothing more to talk about."
       run as_protag "Goodbye."
-    "I don't know..." // Deflect
+    (run wrap_text none "I don't know..."): // Deflect
+      change_theme default
       run as_protag "I don't know..."
       talk ex_bf pout_down "You know. We were made for each other."
       talk ex_bf pout_down "Deep down in your heart you know that we complete each other."
       run as_protag "It's going to rain and I need to go home."
       run as_protag "Goodbye."
-    "Talk about our future." // Accept
+    (run wrap_text none "Talk about our future."): // Accept
+      change_theme default
       run as_protag "I think we still have things to talk about..."
       run as_protag "our future."
       run as_protag "But not today, it's going to rain and I have to go home."
