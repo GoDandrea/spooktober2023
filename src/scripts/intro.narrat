@@ -121,8 +121,8 @@ introMainDialogue:
 // Influenced Dialogue example 
 // (toggle word wrap in your editor to read the long lines)
 //
-//var test_1 (run test_medium mother) -> will run a medium difficulty test on Regina's influence and return either true (success, )
-//
+//var test_1 (run test_medium mother) -> will run a medium difficulty test on Regina's influence and return either true (success) or false (failure)
+//var influenced_dialogue (run wrap_text mother "Influenced dialogue choice")
 //choice:
 //  "Regular choice 1":
 //    run as_protag "blablabla"
@@ -130,7 +130,7 @@ introMainDialogue:
 //  "Regular choice 2" if $test_1: -> This one shows up if the test was successful
 //    run as protag "blabla bleh"
 //    etc
-//  "Influenced dialogue" if (not $test_1): -> This one shows up if the test failed and Mona was influenced
+//  "%{$influenced_dialogue}" if (not $test_1): -> This one shows up if the test failed and Mona was influenced
 //    run as protag "bleh, I'm rotting, whatever"
 //    etc
 //  "Regular choice 3":
