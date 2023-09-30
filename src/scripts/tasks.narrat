@@ -19,14 +19,91 @@ tasksScene:
   run as_protag "I deserve an award for this..."
 
   // Precisamos arrumar as coisas
-  run as_protag "God, it's a mess in here, isn't it?"
+  run as_protag "God, it's a mess in here!"
   run as_protag "The sink full of dishes..."
-  run as_protag "This window making an annoying noise when the wind hits it..."
+  //run as_protag "This window making an annoying noise when the wind hits it..."
+  run as_protag "The things I bought at the market and haven't put away yet..."
   run as_protag "I need to organize these things."
-  run as_protag "Oh gosh, and I still need to call that idiot to get my stuff back. Holy shit!"
+  run as_protag "Oh gosh, and I still need to call that idiot to get my stuff back. Damn!"
 
+  jump tasksChoice
+
+tasksChoice:
   // Realizando as tarefas
-  run as_protag "Okay Mona, you can do it."
+  choice:
+    talk protag idle "Okay Mona, you can do it."
+    "Wash the dishes"
+      run as_protag "How did I let so many dirty dishes accumulate?"
+      jump washingDishes
+    "Store food in cupboards"
+      run as_protag "It's time to put these things away."
+      jump storeFood
+    "Call that guy"
+      run as_protag "I don't want to deal with this now..."
+      jump tasksChoice
+
+washingDishes:
+  // Tocar som de louca sendo lavada
+  talk protag idle "I hope there isn't a monster lurking in the depths of this sink..."
+  choice:
+    run as_protag "Mom always said to wash the glasses first and then the pans..."
+    "Wash the glasses first" // Deflect
+      run as_protag "Yeah, I think she's right about it..."
+      run as_protag "I don't want my glasses full of oil."
+    "Wash the pans first" // Reject
+      run as_protag "Now that I have my own house, I can do whatever I want"
+      run as_protag "In this house the pans will be washed first and you won't stop me, Mom!"
+    "It doesn't matter." // Deflect
+      run as_protag "Why am I even thinking about it?"
+      run as_protag "Maybe I'm thinking too much about what my mother would think of things..."
+  
+  run as_protag "Ic! Ic!"
+  run as_protag "Damn, now I'm sobbing."
+  run as_protag "Ic!"
+  run as_protag "I hope I don't vomit, but I'm feeling something strange."
+  run as_protag "Maybe the water in this apartment isn't good enough to drink..."
+
+  // Som de copo quebrando
+  run as_protag "Damn!"
+  run as_protag "Silly glass!"
+  run as_protag "At least it only made a small cut on my hand."
+  run as_protag "What a strange smell..."
+  run as_protag "Is it my blood?"
+  run as_protag "No, i think it's just the musty smell of this apartment."
+
+  jump tasksChoice
+
+storeFood:
+  run as_protag "Okay, let's put the cereal in the top cupboard..."
+  run as_protag "Put this juice in the fridge..."
+  run as_protag "Put these fruits in the fruit bowl..."
+  run as_protag "I already have some fruit here in the fruit bowl..."
+  run as_protag "Wow, but they look bad..."
+
+  choice:
+    talk protag idle "Do I throw away the bad-looking fruit?"
+    "Yes, they're rotten." // Reject
+      run as_protag "Old things must go for new things to come."
+    "No, it's never good to waste food." // Accept
+      run as_protag "Better to leave it here."
+    "I'll try to eat it now." // Deflect
+      run as_protag "God, it tastes awful!"
+  
+  run as_protag "I remember Mom always told me not to waste food..."
+  run as_protag "I think she's right about it, but..."
+  run as_protag "the fruit bowl in her house is always full of rotten fruit."
+
+  // Som da janela batendo com o vento
+  run as_protag "What was that noise?"
+  run as_protag "It's probably that window again."
+  run as_protag "That's what old apartments are like..."
+  run as_protag "and what the money could afford."
+
+  jump tasksChoice
+
+callGuy:
+  // Som de telefone tocando
+
 
   jump callExStart
 
