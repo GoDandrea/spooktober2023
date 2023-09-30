@@ -95,11 +95,14 @@ introMainDialogue:
   talk mother idle "Why, Mona? Why do this to me?"
   talk mother idle "Why <i>be</i> like this, Mona???"
   run as_protag "Mother, stop! That's not how it works!"
-  talk mother idle "You know what? I've had enough."
-  talk mother idle "You're just like him."
+  talk mother idle "You know what? I've had enough. Go."
+  talk mother idle "You're just like him!"
   
   choice:
-    talk mother idle "Your <i>father</i>."
+    talk mother idle "...you're just like your <i>father</i>."
+//  "This is a regular choice prompt text"
+//  "This choice will only appear if a condition is met" if $data.someFlag:
+//      talk cat idle "Choice response"
     "No. I'm like you.":
       run as_protag "No. I'm like you."
       run as_protag "And just like you, I want things my way."
@@ -114,3 +117,23 @@ introMainDialogue:
 
   run as_protag "Goodbye."
   jump tasksStart
+
+// Influenced Dialogue example 
+// (toggle word wrap in your editor to read the long lines)
+//
+//var test_1 (run test_medium mother) -> will run a medium difficulty test on Regina's influence and return either true (success, )
+//
+//choice:
+//  "Regular choice 1":
+//    run as_protag "blablabla"
+//    etc
+//  "Regular choice 2" if $test_1: -> This one shows up if the test was successful
+//    run as protag "blabla bleh"
+//    etc
+//  "Influenced dialogue" if (not $test_1): -> This one shows up if the test failed and Mona was influenced
+//    run as protag "bleh, I'm rotting, whatever"
+//    etc
+//  "Regular choice 3":
+//    run as protag "ablublubleh"
+//    etc
+//

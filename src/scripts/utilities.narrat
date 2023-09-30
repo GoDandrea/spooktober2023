@@ -13,8 +13,46 @@ as_protag line:
   talk protag offscreen "%{$line}"
   clear_dialog
 
-// Generates the text of an ID option wrapped in the necessary tag
-influenced_dialogue influence text:
+
+// Does a trivial test against the input influence value
+// Never fails if ($influence < 50)
+// Returns a boolean; true if the test is successful
+test_trivial influence:
+  var trivial_threshold (+ (* 20 (run base_transform)) 50)
+  return (< (clamp 0 100 $influence) $trivial_threshold)
+
+// Does an easy test against the input influence value
+// Never fails if ($influence < 20)
+// Returns a boolean; true if the test is successful
+test_easy influence:
+  var easy_threshold (+ (* 20 (run base_transform)) 20)
+  return (< (clamp 0 100 $influence) $easy_threshold)
+
+// Does a medium test against the input influence value
+// Can always fail or succeed
+// Returns a boolean; true if the test is successful
+test_medium influence:
+  var medium_threshold (* 20 (run base_transform))
+  return (< (clamp 0 100 $influence) $medium_threshold)
+
+// Does a hard test against the input influence value
+// Always fails if ($influence > 50)
+// Returns a boolean; true if the test is successful
+test_hard influence:
+  var hard_threshold (* 10 (run base_transform))
+  return (< (clamp 0 100 $influence) $hard_threshold)
+
+// Does an impossible test against the input influence value
+// Always fails if ($influence > 50)
+// Returns a boolean; true if the test is successful
+test_impossible influence:
+  var impossible_threshold (* 4 (run base_transform))
+  return (< (clamp 0 100 $influence) $impossible_threshold)
+
+
+// Returns the $text string wrapped in HTML <p> tags
+// Meant to be used to generate influenced choices
+wrap_text influence text:
   return "<p class='choice %{$influence}'>%{$text}</p>"
 
 // Adds the appropriate amount of IP based on strength:
@@ -26,62 +64,62 @@ influenced_dialogue influence text:
 // "add_corruption mother strong" -> adds 20 mother IP
 // "take_corruption ex weak" -> removes 5 ex IP
 add_corruption type strength:
-  if (== type mother):
-    if (== strength detail):
+  if (== $type mother):
+    if (== $strength detail):
       add_stat mother_influence +1
-    elseif (== strength weak):
+    elseif (== $strength weak):
       add_stat mother_influence +5
-    elseif (== strength moderate):
+    elseif (== $strength moderate):
       add_stat mother_influence +10
-    elseif (== strength strong):
+    elseif (== $strength strong):
       add_stat mother_influence +20
-  elseif (== type ex):
-    if (== strength detail):
+  elseif (== $type ex):
+    if (== $strength detail):
       add_stat ex_influence +1
-    elseif (== strength weak):
+    elseif (== $strength weak):
       add_stat ex_influence +5
-    elseif (== strength moderate):
+    elseif (== $strength moderate):
       add_stat ex_influence +10
-    elseif (== strength strong):
+    elseif (== $strength strong):
       add_stat ex_influence +20
-  elseif (== type friend):
-    if (== strength detail):
+  elseif (== $type friend):
+    if (== $strength detail):
       add_stat friend_influence +1
-    elseif (== strength weak):
+    elseif (== $strength weak):
       add_stat friend_influence +5
-    elseif (== strength moderate):
+    elseif (== $strength moderate):
       add_stat friend_influence +10
-    elseif (== strength strong):
+    elseif (== $strength strong):
       add_stat friend_influence +20
 
 // Same as add_corruption, but removes it instead
 take_corruption type strength:
-  if (== type mother):
-    if (== strength detail):
+  if (== $type mother):
+    if (== $strength detail):
       add_stat mother_influence -1
-    elseif (== strength weak):
+    elseif (== $strength weak):
       add_stat mother_influence -5
-    elseif (== strength moderate):
+    elseif (== $strength moderate):
       add_stat mother_influence -10
-    elseif (== strength strong):
+    elseif (== $strength strong):
       add_stat mother_influence -20
-  elseif (== type ex):
-    if (== strength detail):
+  elseif (== $type ex):
+    if (== $strength detail):
       add_stat ex_influence -1
-    elseif (== strength weak):
+    elseif (== $strength weak):
       add_stat ex_influence -5
-    elseif (== strength moderate):
+    elseif (== $strength moderate):
       add_stat ex_influence -10
-    elseif (== strength strong):
+    elseif (== $strength strong):
       add_stat ex_influence -20
-  elseif (== type friend):
-    if (== strength detail):
+  elseif (== $type friend):
+    if (== $strength detail):
       add_stat friend_influence -1
-    elseif (== strength weak):
+    elseif (== $strength weak):
       add_stat friend_influence -5
-    elseif (== strength moderate):
+    elseif (== $strength moderate):
       add_stat friend_influence -10
-    elseif (== strength strong):
+    elseif (== $strength strong):
       add_stat friend_influence -20
 
 

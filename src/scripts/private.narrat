@@ -1,0 +1,23 @@
+sum_dice acumulator current:
+  // Auxiliary function for the array_reduce in the influence tests
+  return (+ acumulator current)
+
+// Returns a value in the range [0, 5] following a very rough normal distribution
+base_transform:
+  // random [min] [max]: Returns an integer between [min] and [max] (inclusive)
+  // This creates an array called 'dice' with six values from 0 to 5
+  var dice (new Array (random 0 5) (random 0 5) (random 0 5) (random 0 5) (random 0 5) (random 0 5))
+  // Gets the sum of all values in 'dice'
+  var sum (array_reduce $dice sum_dice 0)
+  var result (/ $sum 6)
+  return $result
+
+// Returns the influence score for $influence
+// influence: {mother, ex, friend}
+get_influence_score influence:
+  if (== $influence mother):
+    return (get_stat_value mother_influence)
+  if (== $influence ex):
+    return (get_stat_value ex_influence)
+  if (== $influence friend):
+    return (get_stat_value friend_influence)
