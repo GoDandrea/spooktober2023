@@ -9,7 +9,8 @@ introSceneSetUp:
 
   run setup_protag
 
-  jump start_point
+  // Comentando esse jump código pois gera erro. Caeça, depois olha isso aqui
+  // jump start_point
 
 introMainDialogue:
   // Dialogue begins
