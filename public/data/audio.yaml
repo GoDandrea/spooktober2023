@@ -30,6 +30,13 @@ files:
   song_ex:
     loop: true
     src: music/song_ex.ogg
+  song_apartment:
+    loop: true
+    src: music/song_apartment.ogg
+    volume: 0.9
+  s_washing_dishes:
+    loop: true
+    src: audio/washing_dishes.wav
 options:
   volume: 0.5
   musicFadeInTime: 0.5

@@ -9,8 +9,7 @@ introSceneSetUp:
 
   run setup_protag
 
-  // Comentando esse jump código pois gera erro. Caeça, depois olha isso aqui
-  // jump start_point
+  jump introMainDialogue
 
 introMainDialogue:
   // Dialogue begins
@@ -18,13 +17,17 @@ introMainDialogue:
   run as_protag "Look, mom..."
   
   //var first (new Array )
+  change_theme response
   choice:
     talk mother idle "You'll take your things and leave?"
-    "...": 
+    (run wrap_text none "..."):
+      change_theme default
       run as_protag "..."
-    "Yeah":
+    (run wrap_text none "Yeah"):
+      change_theme default
       run as_protag "Yeah. Yes I will."
-    "It's not like that":
+    (run wrap_text none "It's not like that"):
+      change_theme default
       run as_protag "It's not like that, mom."
 
   talk mother idle "Just like that, huh? Out of the blue."

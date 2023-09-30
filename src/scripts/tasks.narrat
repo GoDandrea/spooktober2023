@@ -2,10 +2,14 @@ tasksStart:
   // Just setup, no dialogue
   empty_sprites
   clear_dialog
-  play music ambience_1
-  play sound ambience_2
+  play music song_apartment
   change_theme default
   set_screen apartment 0 fade 2000 2000
+
+  // Variables
+  var data.washed false // Se lavou a louça
+  var data.stored false // Se guardou os alimentos
+  //set data.washed false
 
   run setup_protag
 
@@ -30,30 +34,47 @@ tasksScene:
 
 tasksChoice:
   // Realizando as tarefas
+  change_theme response
   choice:
-    talk protag idle "Okay Mona, you can do it."
-    "Wash the dishes"
-      run as_protag "How did I let so many dirty dishes accumulate?"
-      jump washingDishes
-    "Store food in cupboards"
-      run as_protag "It's time to put these things away."
-      jump storeFood
-    "Call that guy"
-      run as_protag "I don't want to deal with this now..."
+    talk protag idle "What I do...."
+    (run wrap_text none "Wash the dishes"):
+      change_theme default
+      if $data.washed:
+        run as_protag "I've already washed the dishes."
+        jump tasksChoice
+      else:
+        run as_protag "How did I let so many dirty dishes accumulate?"
+        jump washingDishes
+    (run wrap_text none "Store food in cupboards"):
+      change_theme default
+      if $data.stored:
+        run as_protag "I've already put things away."
+        jump tasksChoice
+      else:
+        run as_protag "It's time to put these things away."
+        jump storeFood
+    (run wrap_text none "Call that guy"):
+      change_theme default
+      run as_protag "I don't want to deal with this now..."  
       jump tasksChoice
 
 washingDishes:
-  // Tocar som de louca sendo lavada
-  talk protag idle "I hope there isn't a monster lurking in the depths of this sink..."
+  play sound s_washing_dishes
+  run as_protag "I hope there isn't a monster lurking in the depths of this sink..."
+  run as_protag "Mom always said to wash the glasses first and then the pans..."
+  change_theme response
   choice:
-    run as_protag "Mom always said to wash the glasses first and then the pans..."
-    "Wash the glasses first" // Deflect
+    talk protag idle "So I..."
+    (run wrap_text none "Wash the glasses first"): // Deflect
+      change_theme default
       run as_protag "Yeah, I think she's right about it..."
       run as_protag "I don't want my glasses full of oil."
-    "Wash the pans first" // Reject
+    (run wrap_text none "Wash the pans first"): // Reject
+      change_theme default
       run as_protag "Now that I have my own house, I can do whatever I want"
       run as_protag "In this house the pans will be washed first and you won't stop me, Mom!"
-    "It doesn't matter." // Deflect
+    (run wrap_text none"It doesn't matter."): // Deflect
+      change_theme default
       run as_protag "Why am I even thinking about it?"
       run as_protag "Maybe I'm thinking too much about what my mother would think of things..."
   
@@ -71,6 +92,8 @@ washingDishes:
   run as_protag "Is it my blood?"
   run as_protag "No, i think it's just the musty smell of this apartment."
 
+  set data.washed true
+
   jump tasksChoice
 
 storeFood:
@@ -80,13 +103,17 @@ storeFood:
   run as_protag "I already have some fruit here in the fruit bowl..."
   run as_protag "Wow, but they look bad..."
 
+  change_theme response
   choice:
     talk protag idle "Do I throw away the bad-looking fruit?"
-    "Yes, they're rotten." // Reject
+    (run wrap_text none "Yes, they're rotten."): // Reject
+      change_theme default
       run as_protag "Old things must go for new things to come."
-    "No, it's never good to waste food." // Accept
+    (run wrap_text none "No, it's never good to waste food."): // Accept
+      change_theme default
       run as_protag "Better to leave it here."
-    "I'll try to eat it now." // Deflect
+    (run wrap_text none "I'll try to eat it now."): // Deflect
+      change_theme default
       run as_protag "God, it tastes awful!"
   
   run as_protag "I remember Mom always told me not to waste food..."
@@ -98,6 +125,8 @@ storeFood:
   run as_protag "It's probably that window again."
   run as_protag "That's what old apartments are like..."
   run as_protag "and what the money could afford."
+
+  set data.stored true
 
   jump tasksChoice
 
