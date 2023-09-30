@@ -18,7 +18,7 @@ introMainDialogue:
   //var first (new Array )
   change_theme response
   choice:
-    talk mother idle "You'll take your things and leave?"
+    talk mother mad "You'll take your things and leave?"
     (run wrap_text none "..."):
       change_theme default
       run as_protag "..."
@@ -29,12 +29,12 @@ introMainDialogue:
       change_theme default
       run as_protag "It's not like that, mom."
 
-  talk mother idle "Just like that, huh? Out of the blue."
-  talk mother idle "You've barely landed a new job and already decided to pack it up."
+  talk mother mad "Just like that, huh? Out of the blue."
+  talk mother cry "You've barely landed a new job and already decided to pack it up."
   
   change_theme response
   choice: 
-    talk mother idle "How long have you been planning this?"
+    talk mother mad "How long have you been planning this?"
     (run wrap_text none "It's none of your business"): // Reject; "I won't justify myself"
       change_theme default
       run as_protag "It's none of your business."
@@ -46,19 +46,19 @@ introMainDialogue:
       run as_protag "A few years."
 
   talk mother idle "And was a little \"goodbye\" ever in those plans?"
-  talk mother idle "Maybe a \"thanks for what you've done\"?"
+  talk mother mad "Maybe a \"thanks for what you've done\"?"
   run as_protag "..."
-  talk mother idle "Sure. Ok."
+  talk mother right "Sure. Ok."
   talk mother idle "What about telling me?"
 
   change_theme response
   choice:
-    talk mother idle "When were you going to tell me you're leaving for good?"
+    talk mother mad "When were you going to tell me you're leaving for good?"
     (run wrap_text none "I didn't know how you'd take it"):
       change_theme default
       run as_protag "I didn't know how you'd take it."
       run as_protag "How you'd react to the news."
-      talk mother idle "How noble of you. To spare me the heartbreak."
+      talk mother cry "How noble of you. To spare me the heartbreak."
     (run wrap_text none "I don't owe you an explanation"):
       change_theme default
       run as_protag "I don't owe you an explanation."
@@ -66,29 +66,29 @@ introMainDialogue:
       change_theme default
       run as_protag "I wasn't."
 
-  talk mother idle "Just leave me hurting by myself, then?"
-  talk mother idle "Such a big part of my life."
-  talk mother idle "So much work."
-  talk mother idle "So much <b>love</b>."
-  talk mother idle "Walking out the door like this, out of nowhere."
+  talk mother cry "Just leave me hurting by myself, then?"
+  talk mother cry "Such a big part of my life."
+  talk mother cry "So much work."
+  talk mother cry "So much <b>love</b>."
+  talk mother cry "Walking out the door like this, out of nowhere."
   run as_protag "It's not out of nowhere mom. Please."
   run as_protag "I'm an adult. I work. I can afford a place."
-  talk mother idle "Barely! You barely make enough."
-  talk mother idle "You barely have any money saved"
+  talk mother mad "Barely! You barely make enough."
+  talk mother mad "You barely have any money saved"
   run as_protag "Enough means enough, mom."
   run as_protag "I can afford it."
-  talk mother idle "..."
+  talk mother right "..."
   run as_protag "..."
-  talk mother idle "...it's because of me, isn't it?"
-  talk mother idle "You don't want your own place."
+  talk mother mad "...it's because of me, isn't it?"
+  talk mother cry "You don't want your own place."
   run as_protag "Mom,"
-  talk mother idle "The responsibilities. The sheer cost!"
+  talk mother mad "The responsibilities. The sheer cost!"
   run as_protag "Mom! What are you on about?"
-  talk mother idle "You don't want your place."
+  talk mother cry "You don't want your place."
 
   change_theme response
   choice:
-    talk mother idle "You want to get away from me."
+    talk mother mad "You want to get away from me."
     (run wrap_text none "Why would I not want my own place?"):
       change_theme default
       run as_protag "Why would I now want my own place?"
@@ -99,23 +99,23 @@ introMainDialogue:
       change_theme default
       run as_protag "This is <b>not</b> about you!"
   
-  talk mother idle "Why do all of this?"
+  talk mother right "Why do all of this?"
   talk mother idle "Why give up on food, shelter, clean clothes?"
   talk mother idle "On your own mother?"
-  talk mother idle "On your own mother who <i>needs</i> you!"
-  talk mother idle "Who <i>loves</i> you!"
+  talk mother cry "On your own mother who <i>needs</i> you!"
+  talk mother mad "Who <i>loves</i> you!"
   run as_protag "Mom, that's enough!"
-  talk mother idle "Just to hurt me???"
+  talk mother cry "Just to hurt me???"
   run as_protag "That's not...!"
-  talk mother idle "Why, Mona? Why do this to me?"
-  talk mother idle "Why <i>be</i> like this, Mona???"
+  talk mother cry "Why, Mona? Why do this to me?"
+  talk mother mad "Why <i>be</i> like this, Mona???"
   run as_protag "Mother, stop! That's not how it works!"
-  talk mother idle "You know what? I've had enough. Go."
-  talk mother idle "You're just like him!"
+  talk mother mad "You know what? I've had enough. Go."
+  talk mother mad "You're just like him!"
   
   change_theme response
   choice:
-    talk mother idle "...you're just like your <i>father</i>."
+    talk mother mad "...you're just like your <i>father</i>."
 //  "This is a regular choice prompt text"
 //  "This choice will only appear if a condition is met" if $data.someFlag:
 //      talk cat idle "Choice response"

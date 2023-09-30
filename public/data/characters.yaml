@@ -59,10 +59,10 @@ characters:
     name: Protag
   mother:
     sprites:
-      idle: mother.png
-      rage: mother-rage.png
-      dark: mother-dark.png
-      offended: mother-offended.png
+      idle: mother_idle.png
+      mad: mother_mad.png
+      right: mother_right.png
+      cry: mother_cry.png
     style:
       color: "#cd6961"
       boxCss:

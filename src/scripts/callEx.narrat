@@ -32,14 +32,18 @@ callExScene:
   talk ex_bf right_down "Because that's where it all began..."
   talk ex_bf right_down "and I think that after we broke up, we never really had a chance to talk."
 
+  change_theme response
   choice:
     talk ex_bf right_down "We've experienced very good things together"
-    "..." // Deflect
+    (run wrap_text none "..."): // Deflect
+      change_theme default
       talk ex_bf right_down "You know it..."
-    "Good days..." // Accept
+    (run wrap_text none "Good days..."): // Accept
+      change_theme default
       run as_protag "Yes, we had good days on that beach."
       talk ex_bf right_down "Yeah..."
-    "Bad things too" // Reject
+    (run wrap_text none "Bad things too"): // Reject
+      change_theme default
       run as_protag "Bad things too."
       talk ex_bf right_down "Yeah, bad things too"
   
@@ -52,13 +56,17 @@ callExScene:
   talk ex_bf right_down "Is it your mother again?"
   talk ex_bf right_down "That witch always gets you down!"
 
+  change_theme response
   choice:
     talk ex_bf right_down "What happened this time?"
-    "I don't want to talk to you about it." // Reject
+    (run wrap_text none "I don't want to talk to you about it."): // Reject
+      change_theme default
       run as_protag "It's not your business."
-    "The same as always." // Accept
+    (run wrap_text none "The same as always."): // Accept
+      change_theme default
       run as_protag "She just get crazy, as usual."
-    "It doesn't matter anymore." // Deflect
+    (run wrap_text none "It doesn't matter anymore."): // Deflect
+      change_theme default
       run as_protag "It doesn't matter, it's been resolved."
   
   run as_protag "Anyway, I need to go."
