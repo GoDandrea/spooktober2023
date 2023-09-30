@@ -3,7 +3,6 @@ introSceneSetUp:
   empty_sprites
   clear_dialog
   play music ambience_1
-  play sound ambience_2
   change_theme default
   set_screen mother_house 0 fade 2000 2000
 
@@ -33,13 +32,17 @@ introMainDialogue:
   talk mother idle "Just like that, huh? Out of the blue."
   talk mother idle "You've barely landed a new job and already decided to pack it up."
   
+  change_theme response
   choice: 
     talk mother idle "How long have you been planning this?"
-    "It's none of your business": // Reject; "I won't justify myself"
+    (run wrap_text none "It's none of your business"): // Reject; "I won't justify myself"
+      change_theme default
       run as_protag "It's none of your business."
-    "A few weeks": // Accept; Answer straight
+    (run wrap_text none "A few weeks"): // Accept; Answer straight
+      change_theme default
       run as_protag "A few weeks."
-    "A few years": // Deflect; "I've always wanted to move away"
+    (run wrap_text none "A few years"): // Deflect; "I've always wanted to move away"
+      change_theme default
       run as_protag "A few years."
 
   talk mother idle "And was a little \"goodbye\" ever in those plans?"
@@ -48,15 +51,19 @@ introMainDialogue:
   talk mother idle "Sure. Ok."
   talk mother idle "What about telling me?"
 
+  change_theme response
   choice:
     talk mother idle "When were you going to tell me you're leaving for good?"
-    "I didn't know how you'd take it":
+    (run wrap_text none "I didn't know how you'd take it"):
+      change_theme default
       run as_protag "I didn't know how you'd take it."
       run as_protag "How you'd react to the news."
       talk mother idle "How noble of you. To spare me the heartbreak."
-    "I don't owe you an explanation":
+    (run wrap_text none "I don't owe you an explanation"):
+      change_theme default
       run as_protag "I don't owe you an explanation."
-    "I wasn't":
+    (run wrap_text none "I wasn't"):
+      change_theme default
       run as_protag "I wasn't."
 
   talk mother idle "Just leave me hurting by myself, then?"
@@ -79,13 +86,17 @@ introMainDialogue:
   run as_protag "Mom! What are you on about?"
   talk mother idle "You don't want your place."
 
+  change_theme response
   choice:
     talk mother idle "You want to get away from me."
-    "Why would I not want my own place?":
+    (run wrap_text none "Why would I not want my own place?"):
+      change_theme default
       run as_protag "Why would I now want my own place?"
-    "I do":
+    (run wrap_text none "I do"):
+      change_theme default
       run as_protag "I do. I want space."
-    "This is <b>not</b> about you!":
+    (run wrap_text none "This is <b>not</b> about you!"):
+      change_theme default
       run as_protag "This is <b>not</b> about you!"
   
   talk mother idle "Why do all of this?"
@@ -102,20 +113,24 @@ introMainDialogue:
   talk mother idle "You know what? I've had enough. Go."
   talk mother idle "You're just like him!"
   
+  change_theme response
   choice:
     talk mother idle "...you're just like your <i>father</i>."
 //  "This is a regular choice prompt text"
 //  "This choice will only appear if a condition is met" if $data.someFlag:
 //      talk cat idle "Choice response"
-    "No. I'm like you.":
+    (run wrap_text none "No. I'm like you."):
+      change_theme default
       run as_protag "No. I'm like you."
       run as_protag "And just like you, I want things my way."
       run as_protag "<b>My</b> things."
-    "Stop it! I just want some space.":
+    (run wrap_text none "Stop it! I just want some space."):
+      change_theme default
       run as_protag "Stop it! I just want some space."
       run as_protag "You're suffocating me!"
       run as_protag "..."
-    "I am. That's why I'm also leaving you.":
+    (run wrap_text none "I am. That's why I'm also leaving you."):
+      change_theme default
       run as_protag "Yes I am. Just like him."
       run as_protag "Which is why I'm also leaving you behind."
 
