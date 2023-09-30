@@ -55,8 +55,11 @@ tasksChoice:
         jump storeFood
     (run wrap_text none "Call that guy"):
       change_theme default
-      run as_protag "I don't want to deal with this now..."  
-      jump tasksChoice
+      if (&& $data.stored $data.washed):
+        jump callGuy
+      else:
+        run as_protag "I don't want to deal with this now..."  
+        jump tasksChoice
 
 washingDishes:
   play sound s_washing_dishes
@@ -132,7 +135,7 @@ storeFood:
 
 callGuy:
   // Som de telefone tocando
-
+  
 
   jump callExStart
 

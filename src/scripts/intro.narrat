@@ -12,7 +12,7 @@ introSceneSetUp:
 
 introMainDialogue:
   // Dialogue begins
-  talk mother idle "So, that's how it is?"
+  talk mother mad "So, that's how it is?"
   run as_protag "Look, mom..."
   
   //var first (new Array )
