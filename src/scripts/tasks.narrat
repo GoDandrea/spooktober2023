@@ -36,7 +36,7 @@ tasksChoice:
   // Realizando as tarefas
   change_theme response
   choice:
-    talk protag idle "What I do...."
+    talk protag idle "I think now I'll..."
     (run wrap_text none "Wash the dishes"):
       change_theme default
       if $data.washed:
@@ -100,7 +100,7 @@ washingDishes:
   jump tasksChoice
 
 storeFood:
-  run as_protag "Okay, let's put the cereal in the top cupboard..."
+  run as_protag "Okay, let's put the cereal in the top cupboard."
   run as_protag "Put this juice in the fridge..."
   run as_protag "Put these fruits in the fruit bowl..."
   run as_protag "I already have some fruit here in the fruit bowl..."
@@ -135,7 +135,10 @@ storeFood:
 
 callGuy:
   // Som de telefone tocando
-  
+  run as_protag "Aff... I don't think I can procrastinate any longer."
+  run as_protag "It's time to make the call..."
+  play sound phone
+  run as_protag ""
 
   jump callExStart
 

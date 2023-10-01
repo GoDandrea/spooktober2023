@@ -30,6 +30,12 @@ files:
   song_ex:
     loop: true
     src: music/song_ex.ogg
+  song_ex_mute:
+    loop: true
+    src: music/song_ex_mute.ogg
+  song_mother:
+    loop: true
+    src: music/song_mother.ogg
   song_apartment:
     loop: true
     src: music/song_apartment.ogg
@@ -37,8 +43,12 @@ files:
   s_washing_dishes:
     loop: true
     src: audio/washing_dishes.wav
+  phone:
+    loop: false
+    src: audio/phone_ringtone3.wav
 options:
-  volume: 0.5
+  defaultMusic: song_apartment
+  volume: 0.7
   musicFadeInTime: 0.5
   musicFadeInDelay: 0.5
   musicFadeOutTime: 0.5

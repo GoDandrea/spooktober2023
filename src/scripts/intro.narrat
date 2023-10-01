@@ -2,7 +2,7 @@ introSceneSetUp:
   // Just setup, no dialogue
   empty_sprites
   clear_dialog
-  play music ambience_1
+  play music song_mother
   change_theme default
   set_screen mother_house 0 fade 2000 2000
 
