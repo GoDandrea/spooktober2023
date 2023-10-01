@@ -1,15 +1,13 @@
 screens:
   default:
-    background: /img/backgrounds/curtain.webp
-  narrat:
-    background: /img/backgrounds/narrat.webp
+    background: img/backgrounds/transition.png
   beach:
-    background: /img/backgrounds/beach_final.png
+    background: img/backgrounds/beach_final.png
   apartment:
-    background: /img/backgrounds/apartment.png
+    background: img/backgrounds/apartment.png
   mother_house:
-    background: /img/backgrounds/mother_house.png
+    background: img/backgrounds/mother_house.png
   motif_ex:
-    background: /img/backgrounds/motif_ex.png
+    background: img/backgrounds/motif_ex.png
   phonecall:
-    background: /img/backgrounds/phonecall.png
+    background: img/backgrounds/phonecall.png

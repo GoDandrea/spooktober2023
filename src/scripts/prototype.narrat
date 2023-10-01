@@ -38,17 +38,15 @@ example_choice:
   set data.shadow.bottom 0
   set data.shadow.cssClass shadow
 
-  var choice1 (run influenced_dialogue "friend" "Yep")
-  var choice2 (run influenced_dialogue "boyfriend" "Fo'Sho!")
   choice:
     think protag idle "Should I fear the old blood?"
-    "%{$choice1}":
+    (run wrap_text friend "Yep"):
       clear_dialog
       wait 100
       add_stat mother_influence +10
       think protag idle "Must succumb to mother"
       jump example_choice
-    "%{$choice2}":
+    (run wrap_text boyfriend "Fo'Sho"):
       clear_dialog
       wait 100
       add_stat mother_influence +10
@@ -73,20 +71,35 @@ resposta:
 
   change_theme response
 
-  var choice1 (run influenced_dialogue "" "Vai ser A")
-  var choice2 (run influenced_dialogue "boyfriend" "Vai ser B")
-  var choice3 (run influenced_dialogue "friend" "Vai ser C")
   choice:
-    talk mother offended "É àí, quãl vâi sër?"
-    "%{$choice1}":
+    talk mother mad "É àí, quãl vâi sër?"
+    (run wrap_text none "Vai ser A"):
       clear_dialog
       jump resposta
-    "%{$choice2}":
+    (run wrap_text boyfriend "Vai ser B"):
+      clear_dialog
+      jump resposta2
+    (run wrap_text friend "Vai ser C"):
       clear_dialog
       jump resposta
-    "%{$choice3}":
+
+resposta2:
+  empty_sprites
+  clear_dialog
+
+  change_theme response
+
+  choice:
+    talk ex_bf dontcare_up "É àí, quãl vâi sër?"
+    (run wrap_text none "Vai ser A"):
       clear_dialog
       jump resposta
+    (run wrap_text boyfriend "Vai ser B"):
+      clear_dialog
+      jump resposta2
+    (run wrap_text friend "Vai ser C"):
+      clear_dialog
+      jump resposta2
 
 francamente:
   clear_dialog

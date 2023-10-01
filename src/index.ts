@@ -81,6 +81,6 @@ const themes: Theme[] = [
   },
   {
     id: "main",
-    cssPath: "/src/css/main.css",
+    cssPath: "src/css/main.css",
   },
 ];
