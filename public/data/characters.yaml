@@ -58,6 +58,9 @@ characters:
       desperate: protag_desperate.png
       down: protag_down.png
       sad: protag_sad.png
+      protag_mother: protag_mother.png
+      protag_friend: protag_friend.png
+      protag_ex: protag_ex.png
       offscreen: none
     name: Protag
   mother:

@@ -11,3 +11,65 @@ endMotherStart:
   jump endMotherScene
 
 endMotherScene:
+
+  run as_protag "???"
+
+  change_theme response
+  choice:
+    talk protag protag_mother "???"
+    (run wrap_text none "Sadness"):
+      change_theme default
+      run as_protag "..."
+    (run wrap_text none "Loneliness"):
+      change_theme default
+      run as_protag "..."
+    (run wrap_text none "Fear"):
+      change_theme default
+      run as_protag "..."
+  
+  change_theme response
+  choice:
+    talk protag protag_mother "I..."
+    (run wrap_text none "I smell like my mother"):
+      change_theme default
+      run as_protag "I couldn't escape her influence..."
+    (run wrap_text none "I talk like my mother"):
+      change_theme default
+      run as_protag "I couldn't escape her influence..."
+    (run wrap_text none "I look like my mother"):
+      change_theme default
+      run as_protag "I couldn't escape her influence..."
+  
+  change_theme response
+  choice:
+    talk protag protag_mother "The..."
+    (run wrap_text none "The fruit mold..."):
+      change_theme default
+      run as_protag "In the end, I became just like her..."
+    (run wrap_text none "The screams..."):
+      change_theme default
+      run as_protag "In the end, I became just like her..."
+    (run wrap_text none "The madness..."):
+      change_theme default
+      run as_protag "In the end, I became just like her..."
+  
+  change_theme response
+  choice:
+    talk protag protag_mother "Could I have lived any other way?"
+    (run wrap_text none "I don't know..."):
+      change_theme default
+      run as_protag "I just wanted..."
+    (run wrap_text none "You idiot!"):
+      change_theme default
+      run as_protag "I just wanted..."
+    (run wrap_text none "Please don't leave me here alone..."):
+      change_theme default
+      run as_protag "I just wanted..."
+  
+  run as_protag "To do things in a different way..."
+  run as_protag "But now I live like a monster."
+  run as_protag "..."
+  run as_protag ".."
+  run as_protag "."
+
+  menu_return
