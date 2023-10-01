@@ -9,5 +9,9 @@ screens:
     background: img/backgrounds/mother_house.png
   motif_ex:
     background: img/backgrounds/motif_ex.png
+  motif_mother:
+    background: img/backgrounds/motif_mother.png
+  motif_friend:
+    background: img/backgrounds/motif_friend.png
   phonecall:
     background: img/backgrounds/phonecall.png

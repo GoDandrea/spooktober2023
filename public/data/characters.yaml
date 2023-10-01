@@ -54,7 +54,10 @@ characters:
         left: 14%
         top: 3%
     sprites:
-      idle: protag.png
+      idle: protag_idle.png
+      desperate: protag_desperate.png
+      down: protag_down.png
+      sad: protag_sad.png
       offscreen: none
     name: Protag
   mother:
