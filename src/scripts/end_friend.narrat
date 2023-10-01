@@ -11,3 +11,75 @@ endFriendStart:
   jump endFriendScene
 
 endFriendScene:
+
+  run as_protag "???"
+
+  change_theme response
+  choice:
+    talk protag protag_friend "???"
+    (run wrap_text none "Friendship"):
+      change_theme default
+      run as_protag "..."
+    (run wrap_text none "Help who needs"):
+      change_theme default
+      run as_protag "..."
+    (run wrap_text none "Humble"):
+      change_theme default
+      run as_protag "..."
+  
+  change_theme response
+  choice:
+    talk protag protag_friend "I..."
+    (run wrap_text none "I have flowers..."):
+      change_theme default
+      run as_protag "I'm independent"
+    (run wrap_text none "I have dreams..."):
+      change_theme default
+      run as_protag "I'm independent"
+    (run wrap_text none "I smell like roses..."):
+      change_theme default
+      run as_protag "I'm independent"
+  
+  change_theme response
+  choice:
+    talk protag protag_friend "The..."
+    (run wrap_text none "flowers..."):
+      change_theme default
+      run as_protag "In the end, I'm happy..."
+    (run wrap_text none "friendship..."):
+      change_theme default
+      run as_protag "In the end, I'm happy..."
+    (run wrap_text none "dreams..."):
+      change_theme default
+      run as_protag "In the end, I'm happy..."
+  
+  change_theme response
+  choice:
+    talk protag protag_friend "Could I have lived any other way?"
+    (run wrap_text none "Yes, but I lived how I wanted."):
+      change_theme default
+      run as_protag "It's like..."
+    (run wrap_text none "Yes, but I love Kiling's Men's new album"):
+      change_theme default
+      run as_protag "It's like..."
+    (run wrap_text none "I didn't want to live any other way."):
+      change_theme default
+      run as_protag "It's like..."
+  
+  run as_protag "being free!"
+  run as_protag "Time to leave the past behind..."
+
+  talk samantha happy "Aren't you going to eat your cake?"
+  run as_protag "Would you like a piece?"
+  talk samantha idle "Absolutely! Would you like to try mine?"
+  run as_protag "Now that you've offered..."
+  talk samantha idle "Haha"
+  talk samantha idle "What do you plan to do from now on?"
+  run as_protag "I want to... "
+  run as_protag "just eat this cake and smell these flowers."
+
+  run as_protag "..."
+  run as_protag ".."
+  run as_protag "."
+
+  menu_return

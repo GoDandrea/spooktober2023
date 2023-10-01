@@ -11,3 +11,65 @@ endExStart:
   jump endExScene
 
 endExScene:
+
+  run as_protag "???"
+
+  change_theme response
+  choice:
+    talk protag protag_ex "???"
+    (run wrap_text none "Jealousy"):
+      change_theme default
+      run as_protag "..."
+    (run wrap_text none "Sea"):
+      change_theme default
+      run as_protag "..."
+    (run wrap_text none "Instability"):
+      change_theme default
+      run as_protag "..."
+  
+  change_theme response
+  choice:
+    talk protag protag_ex "I..."
+    (run wrap_text none "I smell like my boyfriend"):
+      change_theme default
+      run as_protag "I couldn't escape his influence..."
+    (run wrap_text none "I talk like my boyfriend"):
+      change_theme default
+      run as_protag "I couldn't escape his influence..."
+    (run wrap_text none "I look like my boyfriend"):
+      change_theme default
+      run as_protag "I couldn't escape his influence..."
+  
+  change_theme response
+  choice:
+    talk protag protag_ex "The..."
+    (run wrap_text none "The starfish..."):
+      change_theme default
+      run as_protag "In the end, I became just like him..."
+    (run wrap_text none "The screams..."):
+      change_theme default
+      run as_protag "In the end, I became just like him..."
+    (run wrap_text none "The manipulation..."):
+      change_theme default
+      run as_protag "In the end, I became just like him..."
+  
+  change_theme response
+  choice:
+    talk protag protag_ex "Could I have lived any other way?"
+    (run wrap_text none "I don't know..."):
+      change_theme default
+      run as_protag "I just wanted..."
+    (run wrap_text none "Relax, Mona."):
+      change_theme default
+      run as_protag "I just wanted..."
+    (run wrap_text none "You need to give up your dreams..."):
+      change_theme default
+      run as_protag "I just wanted..."
+  
+  run as_protag "To do things in a different way..."
+  run as_protag "But now I live like a monster."
+  run as_protag "..."
+  run as_protag ".."
+  run as_protag "."
+
+  menu_return
