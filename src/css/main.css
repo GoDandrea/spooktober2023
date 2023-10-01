@@ -4,14 +4,14 @@
   font-family: "Laila-Light";
   font-style: normal;
   font-weight: normal;
-  src: url("/public/fonts/Laila-Light.ttf") format("woff2");
+  src: url("/fonts/Laila-Light.ttf") format("woff2");
 }
 
 @font-face {
   font-family: "Laila-Regular";
   font-style: normal;
   font-weight: normal;
-  src: url("/public/fonts/Laila-Regular.ttf") format("woff2");
+  src: url("/fonts/Laila-Regular.ttf") format("woff2");
 }
 
 #app {
@@ -46,7 +46,7 @@
 }
 
 .dialog-box {
-  background-image: url("/public/img/ui/tall-panel.png");
+  background-image: url("/img/ui/tall-panel.png");
   background-size: 100% 100%;
   border-radius: 4px !important;
   position: fixed;
@@ -99,7 +99,7 @@
 }
 
 .choice {
-  background-image: url("/public/img/ui/short-panel.png");
+  background-image: url("/img/ui/short-panel.png");
   background-size: 85%;
   background-repeat: no-repeat;
   background-position: center;
@@ -111,12 +111,12 @@
 }
 
 .boyfriend {
-  background-image: url("/public/img/ui/choice-panel-ex-bf.png");
+  background-image: url("/img/ui/choice-panel-ex-bf.png");
   background-size: 99.2%;
 }
 
 .friend {
-  background-image: url("/public/img/ui/choice-panel-friend.png");
+  background-image: url("/img/ui/choice-panel-friend.png");
   background-size: 99.2%;
   padding: 52px 83px 42px 83px;
 }
@@ -126,25 +126,25 @@
 }
 
 .dialog-choice.selected > .choice {
-  background-image: url("/public/img/ui/short-panel-highlighted.png");
+  background-image: url("/img/ui/short-panel-highlighted.png");
 }
 
 .dialog-choice.selected > .boyfriend {
-  background-image: url("/public/img/ui/choice-panel-ex-bf-highlighted.png");
+  background-image: url("/img/ui/choice-panel-ex-bf-highlighted.png");
 }
 
 .dialog-choice.selected > .mother {
-  background-image: url("/public/img/ui/choice-panel-ex-bf-highlighted.png");
+  background-image: url("/img/ui/choice-panel-ex-bf-highlighted.png");
   background-size: cover !important;
 }
 
 .dialog-choice.selected > .friend {
-  background-image: url("/public/img/ui/choice-panel-friend-highlighted.png");
+  background-image: url("/img/ui/choice-panel-friend-highlighted.png");
 }
 
 #game-splash-screen,
 #game-menu {
-  background-image: url("/public/img/backgrounds/apartment.png") !important;
+  background-image: url("/img/backgrounds/apartment.png") !important;
   background-size: 100%;
 }
 

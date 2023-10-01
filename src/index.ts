@@ -69,15 +69,15 @@ window.addEventListener("load", () => {
 const themes: Theme[] = [
   {
     id: "choices",
-    cssPath: "/public/css/choices.css",
+    cssPath: "/css/choices.css",
   },
   {
     id: "char-center",
-    cssPath: "/public/css/char-center.css",
+    cssPath: "/css/char-center.css",
   },
   {
     id: "response",
-    cssPath: "/public/css/response.css",
+    cssPath: "/css/response.css",
   },
   {
     id: "main",
