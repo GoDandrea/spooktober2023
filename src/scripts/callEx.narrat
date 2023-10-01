@@ -2,7 +2,7 @@ callExStart:
   // Just setup, no dialogue
   empty_sprites
   clear_dialog
-  play music song_ex
+  play music song_ex_mute
   change_theme default
   set_screen phonecall 0 fade 2000 2000
 
