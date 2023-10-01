@@ -16,51 +16,51 @@ friendScene:
   run as_protag "Hi. Make yourself at home. Please don't mind the mess."
   talk samantha happy "Mess? Pff I wish MY apartment had this mess! It's fine, Mona."
   talk samantha happy "I'm happy you called me. I thought I wouldn't be seeing you so soon."
-  talk samantha happy "And look! I brought you some flowers! These are camellias."
-  talk samantha happy "You can make some great tea with them."
+  talk samantha idle "And look! I brought you some flowers! These are camellias."
+  talk samantha idle "You can make some great tea with them."
   run as_protag "Oh...Thanks.They are beautiful."
-  talk samantha happy "So, what have you been up to?"
-  talk samantha happy "You never showed up at the gardening classes again."
+  talk samantha idle "So, what have you been up to?"
+  talk samantha idle "You never showed up at the gardening classes again."
   run as_protag "Yeah... It's been a month already, right?"
   run as_protag "It's just that after I got this job and moved here I haven't got much free time."
-  talk samantha happy "Oh I get it. Moving is so exhausting!"
+  talk samantha thinking "Oh I get it. Moving is so exhausting!"
   run as_protag "I know I had just started and we were having fun."
   run as_protag "But this moving thing really messed with my schedules."
   run as_protag "I swear I like doing our gardening hobby."
-  talk samantha happy "It's ok, Mona. No need to explain yourself."
-  talk samantha happy "We just met each other. I was just eager to see you again."
+  talk samantha idle "It's ok, Mona. No need to explain yourself."
+  talk samantha idle "We just met each other. I was just eager to see you again."
   talk samantha happy "It's so fun talking to you."
  
 
   change_theme response
   choice:
-    talk samantha worried "But...Are you sure that's all? You seem a bit down."
+    talk samantha idle "But...Are you sure that's all? You seem a bit down."
     (run wrap_text none "Really? No, I'm fine. Just need more sleep maybe"): // Reject
       change_theme default
       run as_protag "Really? No, I'm fine. Just need more sleep maybe"
       talk samantha happy "Welp, ok then."
       jump no_venting
-      //set data.as_protag_prefers Reject
+
     (run wrap_text none "It's nothing."): // Deflect
       change_theme default
       run as_protag "Oh it's nothing, don't worry." 
       talk samantha worried "Mona...You can talk to me."
       jump yes_venting
-      //set data.as_protag_prefers Deflect
+    
     (run wrap_text none "There is something going on."): // Accept
       change_theme default
       run as_protag "Actually, there is something going on."
       talk samantha worried "Do you want to talk about it?"
       jump yes_venting
-      //set data.as_protag_prefers Accept
+  
     
    
 no_venting:
-  talk samantha happy "Let me tell you something. I have a friend who is also moving."
-  talk samantha happy "He is moving away from his parents but he is leaving a lot of stuff with them."
-  talk samantha happy "I told him he should bring all the important stuff with him."
-  talk samantha happy "He doesn't have a great relationship with his parents, you know."
-  talk samantha happy "Even so, he insists it's better to leave some stuff there."
+  talk samantha idle "Let me tell you something. I have a friend who is also moving."
+  talk samantha idle "He is moving away from his parents but he is leaving a lot of stuff with them."
+  talk samantha idle "I told him he should bring all the important stuff with him."
+  talk samantha thinking "He doesn't have a great relationship with his parents, you know."
+  talk samantha idle "Even so, he insists it's better to leave some stuff there."
   talk samantha worried "He trusts his parents way too much. They have let him down before."
   talk samantha worried "And I really think it'll happen again."
 
@@ -78,15 +78,15 @@ no_venting:
       run as_protag "No, you're right. You are reasonably worried."
       jump family_issues
   
-  talk samantha worried "I guess you're right...People are different."
-  talk samantha worried "It's just that I think it's better to be more independent."
+  talk samantha idle "I guess you're right...People are different."
+  talk samantha idle "It's just that I think it's better to be more independent."
   talk samantha happy "I got so much happier after I distanced myself from my family!"
   talk samantha happy "After I got my own life, I noticed how bad our relationship was."
   
 
   change_theme response
   choice:
-    talk samantha happy "But he probably thinks different."
+    talk samantha idle "But he probably thinks in a different way."
     (run wrap_text none "How was your relationship with your family?"): // Curious
       change_theme default
       run as_protag "How was your relationship with your family?"
@@ -95,12 +95,32 @@ no_venting:
       change_theme default
       run as_protag "Do you feel lonely without your family?"
       jump independent_life
-    (run wrap_text none "Have you listened to Kling's Men's new album?"):
+    (run wrap_text none "Have you listened to Kling's Men's new album?"): // Diversion
       change_theme default
       run as_protag "Have you listened to Kling's Men's new album? I heard they'll go on a tour."
+  
+  talk samantha happy "OH. MY. GOD. YES! I'm so excited! This puts an end to that awful hiatus."
+  talk samantha happy "I think there'll be a concert close to our city. We should buy tickets."
+
+  change_theme response
+  choice:
+    talk samantha idle "Have you listened to the new album?"
+    (run wrap_text none "Not yet! (You spend some time together until she goes home)"):
+      change_theme default
+      run as_protag "Not yet! How about we listen to it now? Let me get some snacks."
+    // end scene
+    (run wrap_text none "I'm not in the mood right now. (You decide to talk about your situation)"):
+      change_theme default
+      run as_protag "I'm not in the mood right now. Actually, there's something I need to talk about."
+      jump yes_venting
 
 
-//independent_life:
+independent_life:
+
+  talk samantha idle "Getting away from my family was very hard."
+  talk samantha idle "It took many years and steps. I really tried to keep some conection."
+  talk samantha idle "But, through the years, I noticed I was the only one trying."
+  talk samantha idle "Any level of closeness was toxic, and we never could work it out."  
 
 //family_issues:
 
