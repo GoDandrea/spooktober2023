@@ -1,0 +1,115 @@
+
+//Check this. Tried to copy from
+friendStart:
+  //Setup
+  empty_sprites
+  clear_dialog
+  play music friend
+  change_theme default
+  set_screen apartment 0 fade 2000 2000
+
+  run setup_protag
+
+  var data.as_protag_prefers
+
+  jump friendScene
+
+
+friendScene:
+// Dialogue begins
+  run as_protag "Hi. Make yourself at home. Please don't mind the mess."
+  talk samantha happy "Mess? Pff I wish MY apartment had this mess! It's fine, Mona."
+  talk samantha happy "I'm happy you called me. I thought I wouldn't be seeing you so soon."
+  talk samantha happy "And look! I brought you some flowers! These are camellias."
+  talk samantha happy "You can make some great tea with them."
+  run as_protag "Oh...Thanks.They are beautiful."
+  talk samantha happy "So, what have you been up to?"
+  talk samantha happy "You never showed up at the gardening classes again."
+  run as_protag "Yeah... It's been a month already, right?"
+  run as_protag "It's just that after I got this job and moved here I haven't got much free time."
+  talk samantha happy "Oh I get it. Moving is so exhausting!"
+  run as_protag "I know I had just started and we were having fun."
+  run as_protag "But this moving thing really messed with my schedules."
+  run as_protag "I swear I like doing our gardening hobby."
+  talk samantha happy "It's ok, Mona. No need to explain yourself."
+  talk samantha happy "We just met each other. I was just eager to see you again."
+  talk samantha happy "It's so fun talking to you."
+ 
+
+  change_theme response
+  choice:
+    talk samantha worried "But...Are you sure that's all? You seem a bit down."
+    (run wrap_text none "Really? No, I'm fine. Just need more sleep maybe"): // Reject
+      change_theme default
+      run as_protag "Really? No, I'm fine. Just need more sleep maybe"
+      talk samantha happy "Welp, ok then."
+      jump no_venting
+      //set data.as_protag_prefers Reject
+    (run wrap_text none "It's nothing."): // Deflect
+      change_theme default
+      run as_protag "Oh it's nothing, don't worry." 
+      talk samantha worried "Mona...You can talk to me."
+      jump yes_venting
+      //set data.as_protag_prefers Deflect
+    (run wrap_text none "There is something going on."): // Accept
+      change_theme default
+      run as_protag "Actually, there is something going on."
+      talk samantha worried "Do you want to talk about it?"
+      jump yes_venting
+      //set data.as_protag_prefers Accept
+    
+   
+no_venting:
+  talk samantha happy "Let me tell you something. I have a friend who is also moving."
+  talk samantha happy "He is moving away from his parents but he is leaving a lot of stuff with them."
+  talk samantha happy "I told him he should bring all the important stuff with him."
+  talk samantha happy "He doesn't have a great relationship with his parents, you know."
+  talk samantha happy "Even so, he insists it's better to leave some stuff there."
+  talk samantha worried "He trusts his parents way too much. They have let him down before."
+  talk samantha worried "And I really think it'll happen again."
+
+  change_theme response
+  choice:
+    talk samantha worried "Do you think I'm being too nosy? Or maybe insensible about it?"
+    (run wrap_text none "I mean, it's his business, right?"): // Reject
+      change_theme default
+      run as_protag "He probably knows what is better for his life. Maybe don't push it too much."
+    (run wrap_text none "I don't know. Family issues are so complex."): // Deflect
+      change_theme default
+      run as_protag "I don't know. Family issues are so complex."
+    (run wrap_text none "No, you're right."): // Accept
+      change_theme default
+      run as_protag "No, you're right. You are reasonably worried."
+      jump family_issues
+  
+  talk samantha worried "I guess you're right...People are different."
+  talk samantha worried "It's just that I think it's better to be more independent."
+  talk samantha happy "I got so much happier after I distanced myself from my family!"
+  talk samantha happy "After I got my own life, I noticed how bad our relationship was."
+  talk samantha happy "But he probably thinks different."
+
+  change_theme response
+  choice:
+    (run wrap_text none "How was your relationship with your family?"): // Curious
+      change_theme default
+      run as_protag "How was your relationship with your family?"
+      jump independent_life
+    (run wrap_text none "Do you feel lonely without your family?"): // In doubt
+      change_theme default
+      run as_protag "Do you feel lonely without your family?"
+      jump independent_life
+    (run wrap_text none "Have you listened to Kling's Men's new album?"):
+      change_theme default
+      run as_protag "Have you listened to Kling's Men's new album? I heard they'll go on a tour."
+
+
+independent_life:
+
+family_issues:
+
+yes_venting:
+
+
+
+
+ 
