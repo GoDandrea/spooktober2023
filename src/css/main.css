@@ -152,3 +152,7 @@
 #game-title-text {
   font-size: 5rem;
 }
+
+.auto-skip-buttons {
+  right: 10px !important;
+}
