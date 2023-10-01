@@ -21,7 +21,7 @@
   --primary: hsl(255, 30%, 55%);
   --focus: hsl(210, 90%, 50%);
   --secondary: #42b983;
-  --font-family: 'Laila-Light', normal;
+  --font-family: "Laila-Light", normal;
 }
 
 /* Add any other CSS you want here */
@@ -52,10 +52,6 @@
   position: fixed;
   width: 35%;
   height: 142px;
-  /* background-color: black;
-  border-width: 5px;
-  border-color: white;
-  border-radius: 15px !important; */
   padding: 35px !important;
   transform: none !important;
 }
@@ -146,7 +142,8 @@
   background-image: url("/public/img/ui/choice-panel-friend-highlighted.png");
 }
 
-#game-splash-screen, #game-menu {
+#game-splash-screen,
+#game-menu {
   background-image: url("/public/img/backgrounds/apartment.png") !important;
   background-size: 100%;
 }

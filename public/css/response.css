@@ -3,30 +3,30 @@
   right: 53% !important;
   left: auto !important;
   top: 15% !important;
-  height: 100px;
+  height: 100px !important;
   margin-top: 0px !important;
-  width: 32%;
+  width: 32% !important;
   padding: 24px 40px 24px 40px !important;
 }
 
 .dialog-choices {
-  position: fixed;
+  position: fixed !important;
   right: 50% !important;
   left: auto !important;
   top: 30% !important;
-  width: 38%;
+  width: 38% !important;
 }
 
 .dialog-choice,
 .dialog-choice .selected,
 .dialog-choice:hover {
   background-color: transparent !important;
-  color: transparent;
-  font-size: 0px;
-  display: block;
-  margin-top: 0px;
+  color: transparent !important;
+  font-size: 0px !important;
+  display: block !important;
+  margin-top: 0px !important;
 }
 
 .dialog-choices > *:first-child {
-  margin-top: 15px;
+  margin-top: 15px !important;
 }
