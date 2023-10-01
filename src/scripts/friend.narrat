@@ -40,20 +40,17 @@ friendScene:
       run as_protag "Really? No, I'm fine. Just need more sleep maybe"
       talk samantha happy "Welp, ok then."
       jump no_venting
-
     (run wrap_text none "It's nothing."): // Deflect
       change_theme default
       run as_protag "Oh it's nothing, don't worry." 
       talk samantha worried "Mona...You can talk to me."
       jump yes_venting
-    
     (run wrap_text none "There is something going on."): // Accept
       change_theme default
       run as_protag "Actually, there is something going on."
       talk samantha worried "Do you want to talk about it?"
       jump yes_venting
   
-    
    
 no_venting:
   talk samantha idle "Let me tell you something. I have a friend who is also moving."
@@ -107,8 +104,7 @@ no_venting:
     talk samantha idle "Have you listened to the new album?"
     (run wrap_text none "Not yet! (You spend some time together until she goes home)"):
       change_theme default
-      run as_protag "Not yet! How about we listen to it now? Let me get some snacks."
-    // end scene
+      run as_protag "Not yet! How about we listen to it now? Let me get some snacks."// end scene
     (run wrap_text none "I'm not in the mood right now. (You decide to talk about your situation)"):
       change_theme default
       run as_protag "I'm not in the mood right now. Actually, there's something I need to talk about."
@@ -119,13 +115,131 @@ independent_life:
 
   talk samantha idle "Getting away from my family was very hard."
   talk samantha idle "It took many years and steps. I really tried to keep some conection."
-  talk samantha idle "But, through the years, I noticed I was the only one trying."
+  talk samantha idle "Through the years, I noticed I was the only one trying."
   talk samantha idle "Any level of closeness was toxic, and we never could work it out."  
+  run as_protag "It must have been scary."
+  run as_protag "I would get depressed dealing with everything on my own."
+  talk samantha thinking "It's not as if I had no family. Just not a blood relatives."
+  talk samantha happy "I realized my real family were my friends!"
+  talk samantha idle "Also, I was dealing with a lot of stuff on my own even with my family."
+  talk samantha idle "Part of the reason of getting away is that I was already lonely."
+  talk samantha happy "But enough with that! Let's talk about Kling's Men's!"
+  talk samantha idle "I heard they're going on a tour! We have to buy tickets!"
+  
+  change_theme response
+  choice:
+    talk samantha idle "Have you listened to the new album? Let's listen together!"
+    (run wrap_text none "Not yet! (You spend some time together until she goes home)"):
+      change_theme default
+      run as_protag "Not yet! Let me get some snacks."// end scene
+    (run wrap_text none "I'm not in the mood right now. (You decide to talk about your situation)"):
+      change_theme default
+      run as_protag "I'm not in the mood right now. Actually, there's something I need to talk about."
+      jump yes_venting
 
-//family_issues:
 
-//yes_venting:
+family_issues:
 
+  run as_protag "I think it's good that you care about him."
+  run as_protag "Maybe he is resistant because family bonds are so strong."
+  run as_protag "I feel like I have parts from the people I love under my skin."
+  run as_protag "Thinking of any rupture with them is sounds scary."
+  run as_protag "I would fear of being alone."
+  talk samantha idle "I guess you're right...People are different."
+  talk samantha idle "It's just that I think it's better to be more independent."
+  talk samantha happy "I got so much happier after I distanced myself from my family!"
+  talk samantha happy "After I got my own life, I noticed how bad our relationship was."
+  
+  change_theme response
+  choice:
+    talk samantha idle "It came so naturally for me."
+    (run wrap_text none "Do you feel lonely without your family?"): 
+      change_theme default
+      run as_protag "Do you feel lonely without your family?"
+      jump independent_life
+    (run wrap_text none "Actually, I'm also having family issues right now."):
+      change_theme default
+      run as_protag "Actually, I'm also having family issues right now."
+      jump yes_venting
+    (run wrap_text none "Hey, huh... have you listened to the Kling's Men's new album?"):
+      change_theme default
+      run as_protag "Hey, huh, have you listened to the Kling's Men's new album? They've just announced a tour."
+  
+  talk samantha happy "OH. MY. GOD. YES! I'm so excited! This puts an end to that awful hiatus."
+  talk samantha happy "I think there'll be a concert close to our city. We should buy tickets."
+
+  change_theme response
+  choice:
+    talk samantha idle "Have you listened to the new album? Let's listen together!"
+    (run wrap_text none "Not yet! (You spend some time together until she goes home)"):
+      change_theme default
+      run as_protag "Not yet! Let me get some snacks."// end scene
+    (run wrap_text none "I'm not in the mood right now. (You decide to talk about your situation)"):
+      change_theme default
+      run as_protag "I'm not in the mood right now. Actually, there's something I need to talk about."
+      jump yes_venting
+
+
+yes_venting:
+  
+  run as_protag "I've just had a fight with my mom."
+  run as_protag "After I moved she got very angry and bitter with me."
+  run as_protag "I think part of it is my fault. I didn't tell her I was going to move. I'm so selfish."
+  run as_protag "She got surprised that I got my first job and moved right away."
+  run as_protag "She says she's worried with me living by myself."
+  run as_protag "And <b>I am</b> a bit afraid of living alone, I guess..."
+  run as_protag "I don't know... What should I do?"
+  talk samantha worried "Well, first I think you shouldn't be so hard on yourself."
+  talk samantha worried "You aren't a horrible person just because of that."
+  talk samantha worried "And you <b>can</b> take care of yourself!"
+  talk samantha worried "I think YOU know what's best for you. Don't let her mess with your feelings."
+
+  change_theme response
+  choice:
+    talk samantha worried "Sometimes you have to go against the will of your loved ones."
+    (run wrap_text "But she's my mother! I should listen to her."): // Reject
+    change_theme default
+    run as_protag "But she's my mother! I should listen to her. I'm still too young."
+    jump samanthaCaring
+    (run wrap_text "I'm so afraid. I don't want to hurt her."): // Deflect
+    change_theme default
+    run as_protag "I'm so afraid. I don't want to hurt her."
+    run as_protag "I really want to have my own life. But she seems so sad..."
+    jump samanthaCaring
+    (run wrap_text "That's what I think. I'm an adult already!"): // Accept
+    run as_protag "That's what I think. I'm an adult already! I can't keep always following her will."
+  
+  talk samantha idle "There you go, girl. I'm sure you will be alright."
+  talk samantha idle "This part is the hardest, but be confident. You will survive it."
+  talk samantha happy "I mean, no need to be like me and cut ties!"
+  talk samantha thinking "Unless you think that's the case..."
+  run as_protag "Haha! It's not. For now I just want to have my apartment."
+  talk samantha happy "Well, let's listen to Kling's Men's new album, then!"
+  run as_protag idle "I'll get some snacks."
+
+
+samanthaCaring:
+
+  talk samantha worried "Look, I know she's your mother and you love her."
+  talk samantha worried "But you have to stand for our will."
+  talk samantha worried "Maybe she will get upset, but you will not lose her just like that."
+
+  change_theme response
+  choice:
+    talk samantha worried "Don't let those feelings set you back."
+    (run wrap_text "I understand, but I think she's right. I should move back with her."): // Reject
+    change_theme default
+    run as_protag "I understand, but I think she's right. I should move back with her."
+    run as_protag "I jumped to early into this. I need more time."
+    (run wrap_text "I will think about it. I still feel like hurting her isn't fair."): // Deflect
+    change_theme default
+    run as_protag "I will think about it. I still feel like hurting her isn't fair."
+    (run wrap_text "I guess you're right... Let's do something else."): // Accept
+    run as_protag "I guess you're right... Let's do something else."
+  
+  talk samantha idle "Ok... I'm sure you know what's best for you."
+  talk samantha happy "Well, let's listen to Kling's Men's new album, then!"
+  run as_protag idle "I'll get some snacks."
 
 
 
