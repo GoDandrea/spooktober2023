@@ -2,32 +2,32 @@
   position: fixed;
   left: 51.5% !important;
   top: 20% !important;
-  height: 75px;
+  height: 75px !important;
   margin-top: 0px !important;
-  width: 35%;
+  width: 35% !important;
   padding: 24px 40px 24px 40px !important;
 }
 
 .dialog-choices {
-  position: fixed;
+  position: fixed !important;
   left: 50% !important;
   right: auto !important;
   top: 32% !important;
-  width: 38%;
+  width: 38% !important;
 }
 
 .dialog-choice,
 .dialog-choice .selected,
 .dialog-choice:hover {
   background-color: transparent !important;
-  color: transparent;
-  font-size: 0px;
-  display: block;
-  margin-top: 0px;
+  color: transparent !important;
+  font-size: 0px !important;
+  display: block !important;
+  margin-top: 0px !important;
 }
 
 .dialog-choices > *:first-child {
-  margin-top: 15px;
+  margin-top: 15px !important;
 }
 
 /* seletor incrível que infelizmente não dá pra usar porque o firefox é retradatário
@@ -45,5 +45,5 @@
   bottom: 0px !important;
   height: 95% !important;
   width: 25% !important;
-  z-index: 98;
+  z-index: 98 !important;
 }
