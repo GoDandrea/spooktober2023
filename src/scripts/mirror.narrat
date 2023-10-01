@@ -13,4 +13,17 @@ mirrorStart:
 mirrorScene:
 
   run as_protag "Welcome to my new apartment party!"
-  talk mother offended ""
+  talk mother idle "So <i>this</i> is your new apartment..."
+  talk samantha happy "Yay! How are you?"
+  run as_protag "I'm fine, thanks. Have a seat! The cake is almost ready."
+  talk mother idle "Oh, cake. It must be an important occasion."
+  talk samantha thinking "..."
+  run as_protag "...It is! Your daughter has a new job and a new apartment!"
+  talk mother idle "So, will you present your friend to me?"
+  run as_protag "Mom, this is Samantha. I met her at the gardening course."
+  run as_protag "Sam, this is my mom, Regina."
+  talk samantha happy "Nice to meet you, Ms. Regina!"
+  talk mother idle "Nice to meet you."
+  // doorbell?
+  run as_portag "The doorbell? I didn't call anyone else."
+  

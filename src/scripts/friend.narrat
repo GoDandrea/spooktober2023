@@ -216,7 +216,7 @@ yes_venting:
   talk samantha thinking "Unless you think that's the case..."
   run as_protag "Haha! It's not. For now I just want to have my apartment."
   talk samantha happy "Well, let's listen to Kling's Men's new album, then!"
-  run as_protag idle "I'll get some snacks."
+  run as_protag "I'll get some snacks."
 
 
 samanthaCaring:
@@ -241,4 +241,4 @@ samanthaCaring:
   
   talk samantha idle "Ok... I'm sure you know what's best for you."
   talk samantha happy "Well, let's listen to Kling's Men's new album, then!"
-  run as_protag idle "I'll get some snacks."
+  run as_protag "I'll get some snacks."
