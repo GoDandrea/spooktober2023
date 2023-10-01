@@ -69,6 +69,18 @@ characters:
         right: 45%
         bottom: 7%
     name: Mother
+  samantha:
+    sprites:
+      idle: friend_idle.png
+      happy: friend_happy.png
+      thinking: friend_thinking.png
+      worried: friend_worried.png
+    style:
+      color: "#cd6961"
+      boxCss:
+        right: 45%
+        bottom: 7%
+    name: Samantha
   ex_bf:
     sprites:
       dontcare_down: ex_dontcare_down.png

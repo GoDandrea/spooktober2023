@@ -73,7 +73,7 @@ resposta:
 
   choice:
     talk mother mad "É àí, quãl vâi sër?"
-    (run wrap_text none "Vai ser A"):
+    (run wrap_text mother "Vai ser A"):
       clear_dialog
       jump resposta
     (run wrap_text boyfriend "Vai ser B"):

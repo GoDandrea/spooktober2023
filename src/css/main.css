@@ -122,7 +122,9 @@
 }
 
 .mother {
-  background-size: 85%;
+  background-image: url("/img/ui/choice-panel-mother.png");
+  background-size: 94%;
+  padding: 52px 83px 42px 83px;
 }
 
 .dialog-choice.selected > .choice {
@@ -134,8 +136,7 @@
 }
 
 .dialog-choice.selected > .mother {
-  background-image: url("/img/ui/choice-panel-ex-bf-highlighted.png");
-  background-size: cover !important;
+  background-image: url("/img/ui/choice-panel-mother-highlighted.png");
 }
 
 .dialog-choice.selected > .friend {
