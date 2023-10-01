@@ -1,0 +1,92 @@
+climaxStart:
+  // Just setup, no dialogue
+  empty_sprites
+  clear_dialog
+  play music song_mother
+
+  change_theme default
+  set_screen apartment 0 fade 2000 2000
+
+  run setup_protag
+
+  jump climaxScene
+
+climaxScene:
+
+  // Mãe chega na casa
+  run as_protag "Who could be knocking on the door at this hour?"
+  run as_protag "Mom? What are you doing here?"
+  talk mother mad "So this is your apartment..."
+
+  change_theme response
+  choice:
+    talk mother mad "Is this where you live with that asshole boyfriend of yours?"
+    (run wrap_text none "I'm not seeing him anymore"):
+      change_theme default
+    (run wrap_text none "It's not your business!"):
+      change_theme default
+    (run wrap_text none "What are you doing here?"):
+      change_theme default
+
+  talk mother cry "You're ungrateful..."
+  talk mother mad "I've always given you everything, everything!"
+  
+  change_theme response
+  choice:
+    talk protag idle "Mom..."
+    (run wrap_text none "I know I owe you everything, but..."):
+      change_theme default
+    (run wrap_text none "I don't want to make you sad..."):
+      change_theme default
+    (run wrap_text none "You need to understand that I've grown up!"):
+      change_theme default
+  
+  talk mother mad "Stop it! I don't want to hear what you have to say anymore!"
+  run as_protag "So what are you doing here?"
+  talk mother mad "I've come to get you! Let's go back home."
+  run as_protag "Do you know if I want to go?"
+  talk mother cry "You won't know how to live alone..."
+  
+  change_theme response
+  choice:
+    talk mother cry "Without me, without my help..."
+    (run wrap_text none "You're a horrible stupid woman!"):
+      change_theme default
+    (run wrap_text none "It's not up to you to make this decision."):
+      change_theme default
+    (run wrap_text none "Go on, get it out"):
+      change_theme default
+  
+  talk mother mad "Look at your musty face!"
+  talk mother mad "Do you think you'll ever get rid of me?"
+  talk mother mad "I will always be IN you."
+  talk mother mad "And your smell will be my smell"
+  talk mother mad "And your words will be my words."
+  
+  change_theme response
+  choice:
+    talk mother mad "There's NO ESCAPE."
+    (run wrap_text none "I never want to look at your face again!"):
+      change_theme default
+      run as_protag "Get out of my house!"
+      run as_protag "Get out! Get out! Get out! Get out!"
+      run as_protag "You stupid bitch!"
+    (run wrap_text none "You need help, mom."):
+      change_theme default
+      run as_protag "I'm not like you, mom"
+      run as_protag "Sometimes I think you hate me..."
+      run as_protag "But you're just alone."
+      run as_protag "I will never stop loving you, but..."
+      run as_protag "You don't let me breathe!"
+    (run wrap_text none "If going back home is what you want..."):
+      change_theme default
+      run as_protag "I'll be back with you, mom."
+      run as_protag "I know it's the only way to stop this madness..."
+  
+  run as_protag "AAAAAAAAAAA"
+  talk mother idle "What is happening???"
+  run as_protag "AAAAAAAAAAAAAAAAAAAAA"
+  talk mother idle "Mona..."
+  
+
+

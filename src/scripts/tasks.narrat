@@ -139,6 +139,7 @@ callGuy:
   run as_protag "It's time to..."
   play sound phone
   run as_protag "Who's calling me?"
+  run as_protag "Ic!"
   run as_protag "Oh, I don't even need to call you."
   run as_protag "Good. I didn't want to give you this little pleasure."
 
