@@ -12,7 +12,7 @@
   position: fixed !important;
   left: 50% !important;
   right: auto !important;
-  top: 32% !important;
+  top: 34% !important;
   width: 38% !important;
 }
 
@@ -46,4 +46,8 @@
   height: 95% !important;
   width: 25% !important;
   z-index: 98 !important;
+}
+
+.button.selected {
+  border: 2px solid #7f0d0c !important;
 }
