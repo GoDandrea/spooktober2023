@@ -10,8 +10,6 @@ friendStart:
 
   run setup_protag
 
-  var data.as_protag_prefers
-
   jump friendScene
 
 
@@ -86,10 +84,11 @@ no_venting:
   talk samantha worried "It's just that I think it's better to be more independent."
   talk samantha happy "I got so much happier after I distanced myself from my family!"
   talk samantha happy "After I got my own life, I noticed how bad our relationship was."
-  talk samantha happy "But he probably thinks different."
+  
 
   change_theme response
   choice:
+    talk samantha happy "But he probably thinks different."
     (run wrap_text none "How was your relationship with your family?"): // Curious
       change_theme default
       run as_protag "How was your relationship with your family?"
@@ -103,11 +102,11 @@ no_venting:
       run as_protag "Have you listened to Kling's Men's new album? I heard they'll go on a tour."
 
 
-independent_life:
+//independent_life:
 
-family_issues:
+//family_issues:
 
-yes_venting:
+//yes_venting:
 
 
 
