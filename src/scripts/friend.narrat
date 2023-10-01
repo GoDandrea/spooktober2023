@@ -2,7 +2,7 @@ friendStart:
   //Setup
   empty_sprites
   clear_dialog
-  play music friend
+  play music song_apartment
   change_theme default
   set_screen apartment 0 fade 2000 2000
 
