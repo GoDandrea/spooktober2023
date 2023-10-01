@@ -197,17 +197,18 @@ yes_venting:
   change_theme response
   choice:
     talk samantha worried "Sometimes you have to go against the will of your loved ones."
-    (run wrap_text "But she's my mother! I should listen to her."): // Reject
-    change_theme default
-    run as_protag "But she's my mother! I should listen to her. I'm still too young."
-    jump samanthaCaring
-    (run wrap_text "I'm so afraid. I don't want to hurt her."): // Deflect
-    change_theme default
-    run as_protag "I'm so afraid. I don't want to hurt her."
-    run as_protag "I really want to have my own life. But she seems so sad..."
-    jump samanthaCaring
-    (run wrap_text "That's what I think. I'm an adult already!"): // Accept
-    run as_protag "That's what I think. I'm an adult already! I can't keep always following her will."
+    (run wrap_text none "But she's my mother! I should listen to her."): // Reject
+      change_theme default
+      run as_protag "But she's my mother! I should listen to her. I'm still too young."
+      jump samanthaCaring
+    (run wrap_text none "I'm so afraid. I don't want to hurt her."): // Deflect
+      change_theme default
+      run as_protag "I'm so afraid. I don't want to hurt her."
+      run as_protag "I really want to have my own life. But she seems so sad..."
+      jump samanthaCaring
+    (run wrap_text none "That's what I think. I'm an adult already!"): // Accept
+      change_theme default
+      run as_protag "That's what I think. I'm an adult already! I can't keep always following her will."
   
   talk samantha idle "There you go, girl. I'm sure you will be alright."
   talk samantha idle "This part is the hardest, but be confident. You will survive it."
@@ -227,20 +228,17 @@ samanthaCaring:
   change_theme response
   choice:
     talk samantha worried "Don't let those feelings set you back."
-    (run wrap_text "I understand, but I think she's right. I should move back with her."): // Reject
-    change_theme default
-    run as_protag "I understand, but I think she's right. I should move back with her."
-    run as_protag "I jumped to early into this. I need more time."
-    (run wrap_text "I will think about it. I still feel like hurting her isn't fair."): // Deflect
-    change_theme default
-    run as_protag "I will think about it. I still feel like hurting her isn't fair."
-    (run wrap_text "I guess you're right... Let's do something else."): // Accept
-    run as_protag "I guess you're right... Let's do something else."
+    (run wrap_text none "I understand, but I think she's right. I should move back with her."): // Reject
+      change_theme default
+      run as_protag "I understand, but I think she's right. I should move back with her."
+      run as_protag "I jumped to early into this. I need more time."
+    (run wrap_text none "I will think about it. I still feel like hurting her isn't fair."): // Deflect
+      change_theme default
+      run as_protag "I will think about it. I still feel like hurting her isn't fair."
+    (run wrap_text none "I guess you're right... Let's do something else."): // Accept
+      change_theme default
+      run as_protag "I guess you're right... Let's do something else."
   
   talk samantha idle "Ok... I'm sure you know what's best for you."
   talk samantha happy "Well, let's listen to Kling's Men's new album, then!"
   run as_protag idle "I'll get some snacks."
-
-
-
- 
