@@ -16,24 +16,24 @@ callExStart:
 callExScene:
   talk ex_bf right_down "Mona, I need to talk to you."
   run as_protag "What do you want?"
-  talk ex_bf right_down "I want to talk."
+  talk ex_bf right_up "I want to talk."
   run as_protag "We have nothing left to talk about."
   run as_protag "You just need to give me back my things and after that it's over."
-  talk ex_bf right_down "What things?"
+  talk ex_bf pout_up "What things?"
   run as_protag "The things I left at your house. The bracelet, the earrings..."
   run as_protag "I need them back."
   talk ex_bf right_down "Wow, I didn't even see these things here..."
-  talk ex_bf right_down "But it's been a mess since the last time we saw each other."
+  talk ex_bf right_up "But it's been a mess since the last time we saw each other."
   run as_protag "Yes, I can imagine. But try to find them."
-  talk ex_bf right_down "Okay, if it's what you want..."
+  talk ex_bf dontcare_down "Okay, if it's what you want..."
   talk ex_bf right_down "Then I can take them to the beach for you."
   run as_protag "Why do you want to meet me on the beach?"
   talk ex_bf right_down "Because that's where it all began..."
-  talk ex_bf right_down "and I think that after we broke up, we never really had a chance to talk."
+  talk ex_bf pout_up "and I think that after we broke up, we never really had a chance to talk."
 
   change_theme response
   choice:
-    talk ex_bf right_down "We've experienced very good things together"
+    talk ex_bf pout_up "We've experienced very good things together"
     (run wrap_text none "..."): // Deflect
       change_theme default
       talk ex_bf right_down "You know it..."
@@ -46,18 +46,18 @@ callExScene:
       run as_protag "Bad things too."
       talk ex_bf right_down "Yeah, bad things too"
   
-  talk ex_bf right_down "And I think we need a chance to talk after everything."
+  talk ex_bf pout_up "And I think we need a chance to talk after everything."
   run as_protag "I don't know..."
   talk ex_bf right_down "Please Mona, I promise it will be quick."
-  talk ex_bf right_down "Anyway, I need to give you back your bracelet and earrings."
-  talk ex_bf right_down "We solve both things."
+  talk ex_bf right_up "Anyway, I need to give you back your bracelet and earrings."
+  talk ex_bf dontcare_down "We solve both things."
   run as_protag "I don't know if I'm well enough to go out tomorrow."
   talk ex_bf right_down "Is it your mother again?"
-  talk ex_bf right_down "That witch always gets you down!"
+  talk ex_bf pout_down "That witch always gets you down!"
 
   change_theme response
   choice:
-    talk ex_bf right_down "What happened this time?"
+    talk ex_bf right_up "What happened this time?"
     (run wrap_text none "I don't want to talk to you about it."): // Reject
       change_theme default
       run as_protag "It's not your business."
@@ -69,7 +69,7 @@ callExScene:
       run as_protag "It doesn't matter, it's been resolved."
   
   run as_protag "Anyway, I need to go."
-  talk ex_bf right_down "We'll meet tomorrow at 8am on the beach then?"
+  talk ex_bf right_up "We'll meet tomorrow at 8am on the beach then?"
   run as_protag "If it's the only way to get my stuff back..."
   talk ex_bf right_down "All right, see you tomorrow Mona."
   run as_protag "Bye."
