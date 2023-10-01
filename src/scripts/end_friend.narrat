@@ -1,0 +1,13 @@
+endFriendStart:
+  // Just setup, no dialogue
+  empty_sprites
+  clear_dialog
+  play music song_apartment
+  change_theme default
+  set_screen motif_friend 0 fade 2000 2000
+
+  run setup_protag
+
+  jump endFriendScene
+
+endFriendScene:

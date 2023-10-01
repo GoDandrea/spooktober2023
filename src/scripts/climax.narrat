@@ -23,23 +23,29 @@ climaxScene:
     talk mother mad "Is this where you live with that asshole boyfriend of yours?"
     (run wrap_text none "I'm not seeing him anymore"):
       change_theme default
+      run as_protag "I haven't seen him in weeks."
     (run wrap_text none "It's not your business!"):
       change_theme default
+      run as_protag "Whether I see him or not is none of your business."
     (run wrap_text none "What are you doing here?"):
       change_theme default
+      run as_protag "Why did you come?"
 
   talk mother cry "You're ungrateful..."
   talk mother mad "I've always given you everything, everything!"
   
   change_theme response
   choice:
-    talk protag idle "Mom..."
+    talk protag desperate "Mom..."
     (run wrap_text none "I know I owe you everything, but..."):
       change_theme default
+      run as_protag "I want you to know that..."
     (run wrap_text none "I don't want to make you sad..."):
       change_theme default
+      run as_protag "I want you to know that..."
     (run wrap_text none "You need to understand that I've grown up!"):
       change_theme default
+      run as_protag "This is my life! My decisions!"
   
   talk mother mad "Stop it! I don't want to hear what you have to say anymore!"
   run as_protag "So what are you doing here?"
@@ -52,10 +58,13 @@ climaxScene:
     talk mother cry "Without me, without my help..."
     (run wrap_text none "You're a horrible stupid woman!"):
       change_theme default
+      run as_protag "You're a monster!"
     (run wrap_text none "It's not up to you to make this decision."):
       change_theme default
+      run as_protag "This is my decision!"
     (run wrap_text none "Go on, get it out"):
       change_theme default
+      run as_protag "Ok, say what you want."
   
   talk mother mad "Look at your musty face!"
   talk mother mad "Do you think you'll ever get rid of me?"
@@ -84,9 +93,11 @@ climaxScene:
       run as_protag "I know it's the only way to stop this madness..."
   
   run as_protag "AAAAAAAAAAA"
-  talk mother idle "What is happening???"
+  talk mother right "What is happening???"
   run as_protag "AAAAAAAAAAAAAAAAAAAAA"
-  talk mother idle "Mona..."
-  
+  talk mother right "Mona..."
+
+  jump end_mother
+
 
 

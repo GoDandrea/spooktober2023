@@ -1,0 +1,13 @@
+endMotherStart:
+  // Just setup, no dialogue
+  empty_sprites
+  clear_dialog
+  play music song_mother
+  change_theme default
+  set_screen motif_mother 0 fade 2000 2000
+
+  run setup_protag
+
+  jump endMotherScene
+
+endMotherScene:
