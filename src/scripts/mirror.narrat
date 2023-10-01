@@ -25,5 +25,20 @@ mirrorScene:
   talk samantha happy "Nice to meet you, Ms. Regina!"
   talk mother idle "Nice to meet you."
   // doorbell?
-  run as_portag "The doorbell? I didn't call anyone else."
+  run as_protag "The doorbell? I didn't invite anyone else."
+  run as_protag "...Dylan?!"
+  talk ex_bf "Hello! I heard you were having a party and wanted to see you."
+  run as_protag "Dylan, I didn't invite you"
+  talk ex_bf "What? So I can't visit you to celebrate your achievements?"
+  run as_protag "You know what--"
+  talk mother idle "Dear, let him in. Don't be so rude."
+  run as_protag "..."
+  run as_protag "Well, let me see the cake, it should be ready."
+  //gets the cake
+  //look into a mirror
+
+  run as_protag "<b>WHAT?? WHAT IS THIS?! WHAT'S HAPPENING TO ME?!</b>"
+  talk samantha worried "What's wrong, Mona?"
+  run as_protag "<b>MY BODY! CAN'T YOU SEE?! IT'S... IT'S...</b>"
+  //vomits
   
