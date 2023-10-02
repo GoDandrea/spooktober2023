@@ -1,35 +1,12 @@
 files:
-  calm:
-    loop: true
-    src: music/music.mp3
-  battle:
-    loop: true
-    src: music/battle.mp3
   click:
     src: audio/click.ogg
-  game_start:
-    volume: 0.9
-    src: audio/game_start.ogg
-  failure:
-    src: audio/failure.ogg
-  kitchen:
-    loop: false
-    src: music/yahaveva-kitchen.mp3
   thunder:
     loop: false
     src: audio/thunder.wav
-  ambience_1:
-    loop: true
-    src: music/klankbeeld-roomtone.mp3
-  ambience_2:
-    loop: true
-    src: music/grimmreapersounds-bass.mp3
   ambience_beach:
     loop: true
     src: music/beach_ambience_short.wav
-  song_ex:
-    loop: true
-    src: music/song_ex.ogg
   song_ex_mute:
     loop: true
     src: music/song_ex_mute.ogg
@@ -40,12 +17,9 @@ files:
     loop: true
     src: music/song_apartment.ogg
     volume: 0.9
-  s_washing_dishes:
-    loop: true
-    src: audio/washing_dishes.wav
   phone:
     loop: false
-    src: audio/phone_ringtone3.wav
+    src: audio/phone_ringtone.wav
 options:
   defaultMusic: song_apartment
   volume: 0.7
@@ -54,5 +28,3 @@ options:
   musicFadeOutTime: 0.5
 audioTriggers:
   onPlayerAnswered: click
-  onPressStart: game_start
-  onSkillCheckFailure: failure

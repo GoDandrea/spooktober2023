@@ -26,7 +26,6 @@
 
 /* Add any other CSS you want here */
 .viewport-layer-background {
-  background-image: url(&quot;/img/backgrounds/kitchen.png&quot;);
   background-size: 100% auto;
   position: absolute;
   left: 0px;
