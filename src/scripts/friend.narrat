@@ -105,6 +105,7 @@ no_venting:
     (run wrap_text none "Not yet! (You spend some time together until she goes home)"):
       change_theme default
       run as_protag "Not yet! How about we listen to it now? Let me get some snacks."// end scene
+      jump yes_venting
     (run wrap_text none "I'm not in the mood right now. (You decide to talk about your situation)"):
       change_theme default
       run as_protag "I'm not in the mood right now. Actually, there's something I need to talk about."
@@ -132,6 +133,7 @@ independent_life:
     (run wrap_text none "Not yet! (You spend some time together until she goes home)"):
       change_theme default
       run as_protag "Not yet! Let me get some snacks."// end scene
+      jump mirrorStart
     (run wrap_text none "I'm not in the mood right now. (You decide to talk about your situation)"):
       change_theme default
       run as_protag "I'm not in the mood right now. Actually, there's something I need to talk about."
@@ -174,6 +176,7 @@ family_issues:
     (run wrap_text none "Not yet! (You spend some time together until she goes home)"):
       change_theme default
       run as_protag "Not yet! Let me get some snacks."// end scene
+      jump mirrorStart
     (run wrap_text none "I'm not in the mood right now. (You decide to talk about your situation)"):
       change_theme default
       run as_protag "I'm not in the mood right now. Actually, there's something I need to talk about."
@@ -218,6 +221,7 @@ yes_venting:
   talk samantha happy "Well, let's listen to Kling's Men's new album, then!"
   run as_protag "I'll get some snacks."
 
+  jump mirrorStart
 
 samanthaCaring:
 

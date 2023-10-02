@@ -4,7 +4,7 @@ mirrorStart:
   clear_dialog
   play music song_apartment
   change_theme default
-  set_screen apartment 0 fade 2000 2000
+  set_screen default 0 fade 2000 2000
 
   run setup_protag
 
@@ -20,4 +20,4 @@ mirrorScene:
   run as_protag "I don't know what this is. Do you know something about it?"
   run as_protag "I'm going to meet my ex-boyfriend. I think I'll just cover it with my clothes."
   
-  jump beachStart
+  jump climaxStart
