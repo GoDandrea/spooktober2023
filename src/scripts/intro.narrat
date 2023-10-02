@@ -24,6 +24,7 @@ introMainDialogue:
     talk mother mad "You'll take your things and leave?"
     (run wrap_text none "..."):
       change_theme default
+      wait 100
       run as_protag "..."
     (run wrap_text none "Yeah"):
       change_theme default
