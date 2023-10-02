@@ -1,16 +1,22 @@
 setup_protag:
   // This comment is here because Narrat breaks if the first line
-  // in a script is a comment lmao
-  // Sets up Mona's sprite
+  // Sets up the player character
   change_player_character protag
+
+
+// Sets up Mona's sprite
+// Says a line as Mona
+as_protag line:
+  clear_dialog
+
   set data.avatar (create_sprite img/ui/protag-avatar.png 15 15)
   set data.avatar.width 142
   set data.avatar.height 142
 
-// Says a line as Mona
-as_protag line:
-  clear_dialog
   talk protag offscreen "%{$line}"
+
+  delete_sprite $avatar
+
   clear_dialog
 
 

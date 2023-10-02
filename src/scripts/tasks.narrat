@@ -34,7 +34,7 @@ tasksScene:
 
 tasksChoice:
   // Realizando as tarefas
-  change_theme response
+  change_theme choices
   choice:
     talk protag idle "I think now I'll..."
     (run wrap_text none "Wash the dishes"):
@@ -62,10 +62,9 @@ tasksChoice:
         jump tasksChoice
 
 washingDishes:
-  play sound s_washing_dishes
   run as_protag "I hope there isn't a monster lurking in the depths of this sink..."
   run as_protag "Mom always said to wash the glasses first and then the pans..."
-  change_theme response
+  change_theme choices
   choice:
     talk protag idle "So I..."
     (run wrap_text none "Wash the glasses first"): // Deflect
@@ -107,7 +106,7 @@ storeFood:
   run as_protag "I already have some fruit here in the fruit bowl..."
   run as_protag "Wow, but they look bad..."
 
-  change_theme response
+  change_theme choices
   choice:
     talk protag idle "Do I throw away the bad-looking fruit?"
     (run wrap_text none "Yes, they're rotten."): // Reject
@@ -137,7 +136,7 @@ storeFood:
 
 callGuy:
   // Som de telefone tocando
-  run as_protag "Aff... I don't think I can procrastinate any longer."
+  run as_protag "Ugh... I don't think I can procrastinate any longer."
   run as_protag "It's time to..."
   play sound phone
   run as_protag "Who's calling me?"

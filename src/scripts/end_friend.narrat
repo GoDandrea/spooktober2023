@@ -14,7 +14,7 @@ endFriendScene:
 
   run as_protag "???"
 
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_friend "???"
     (run wrap_text none "Friendship"):
@@ -27,7 +27,7 @@ endFriendScene:
       change_theme default
       run as_protag "..."
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_friend "I..."
     (run wrap_text none "I have flowers..."):
@@ -40,7 +40,7 @@ endFriendScene:
       change_theme default
       run as_protag "I'm independent"
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_friend "The..."
     (run wrap_text none "flowers..."):
@@ -53,7 +53,7 @@ endFriendScene:
       change_theme default
       run as_protag "In the end, I'm happy..."
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_friend "Could I have lived any other way?"
     (run wrap_text none "Yes, but I lived how I wanted."):

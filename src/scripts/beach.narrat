@@ -56,7 +56,7 @@ beachScene:
   // Essa sequencia pode virar um think
   run as_protag "Damn... I can't believe he actually went to get the food."
   run as_protag "It's always like this."
-  run as_protag "Aff..."
+  run as_protag "Ugh..."
   run as_protag "At least the breeze is very good today..."
   run as_protag "and the sound of the sea, it's better than the silence in that apartment."
   run as_protag "Wow, but what are those things?"

@@ -14,7 +14,7 @@ endExScene:
 
   run as_protag "???"
 
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_ex "???"
     (run wrap_text none "Jealousy"):
@@ -27,7 +27,7 @@ endExScene:
       change_theme default
       run as_protag "..."
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_ex "I..."
     (run wrap_text none "I smell like my boyfriend"):
@@ -40,7 +40,7 @@ endExScene:
       change_theme default
       run as_protag "I couldn't escape his influence..."
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_ex "The..."
     (run wrap_text none "The starfish..."):
@@ -53,7 +53,7 @@ endExScene:
       change_theme default
       run as_protag "In the end, I became just like him..."
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_ex "Could I have lived any other way?"
     (run wrap_text none "I don't know..."):

@@ -14,7 +14,7 @@ endMotherScene:
 
   run as_protag "???"
 
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_mother "???"
     (run wrap_text none "Sadness"):
@@ -27,7 +27,7 @@ endMotherScene:
       change_theme default
       run as_protag "..."
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_mother "I..."
     (run wrap_text none "I smell like my mother"):
@@ -40,7 +40,7 @@ endMotherScene:
       change_theme default
       run as_protag "I couldn't escape her influence..."
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_mother "The..."
     (run wrap_text none "The fruit mold..."):
@@ -53,7 +53,7 @@ endMotherScene:
       change_theme default
       run as_protag "In the end, I became just like her..."
   
-  change_theme response
+  change_theme choices
   choice:
     talk protag protag_mother "Could I have lived any other way?"
     (run wrap_text none "I don't know..."):
