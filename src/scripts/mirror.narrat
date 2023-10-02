@@ -12,33 +12,12 @@ mirrorStart:
 
 mirrorScene:
 
-  run as_protag "Welcome to my new apartment party!"
-  talk mother idle "So <i>this</i> is your new apartment..."
-  talk samantha happy "Yay! How are you?"
-  run as_protag "I'm fine, thanks. Have a seat! The cake is almost ready."
-  talk mother idle "Oh, cake. It must be an important occasion."
-  talk samantha thinking "..."
-  run as_protag "...It is! Your daughter has a new job and a new apartment!"
-  talk mother idle "So, will you present your friend to me?"
-  run as_protag "Mom, this is Samantha. I met her at the gardening course."
-  run as_protag "Sam, this is my mom, Regina."
-  talk samantha happy "Nice to meet you, Ms. Regina!"
-  talk mother idle "Nice to meet you."
-  // doorbell?
-  run as_protag "The doorbell? I didn't invite anyone else."
-  run as_protag "...Dylan?!"
-  talk ex_bf "Hello! I heard you were having a party and wanted to see you."
-  run as_protag "Dylan, I didn't invite you"
-  talk ex_bf "What? So I can't visit you to celebrate your achievements?"
-  run as_protag "You know what--"
-  talk mother idle "Dear, let him in. Don't be so rude."
-  run as_protag "..."
-  run as_protag "Well, let me see the cake, it should be ready."
-  //gets the cake
-  //look into a mirror
-
-  run as_protag "<b>WHAT?? WHAT IS THIS?! WHAT'S HAPPENING TO ME?!</b>"
-  talk samantha worried "What's wrong, Mona?"
-  run as_protag "<b>MY BODY! CAN'T YOU SEE?! IT'S... IT'S...</b>"
-  //vomits
+  run as_protag "Sam, something is wrong. I'll send you a voice note."
+  run as_protag "I've just woken up and looked into the mirror."
+  run as_protag "My body is full of mold. This doesn't make sense."
+  run as_protag "There's some mold growing on my chest and my arms."
+  run as_protag "It's so disgusting. I'm all green and a strange toxic smell is getting me nauseous."
+  run as_protag "I don't know what this is. Do you know something about it?"
+  run as_protag "I'm going to meet my ex-boyfriend. I think I'll just cover it with my clothes."
   
+  jump beachStart
