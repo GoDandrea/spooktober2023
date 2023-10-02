@@ -6,6 +6,9 @@ introSceneSetUp:
   change_theme default
   set_screen mother_house 0 fade 2000 2000
 
+  var data.ex false // Final ex (influencia do ex)
+  var data.mom false // Final mae (influencia da mae)
+
   run setup_protag
 
   jump introMainDialogue
@@ -121,6 +124,7 @@ introMainDialogue:
 //      talk cat idle "Choice response"
     (run wrap_text none "No. I'm like you."):
       change_theme default
+      set data.mom true
       run as_protag "No. I'm like you."
       run as_protag "And just like you, I want things my way."
       run as_protag "<b>My</b> things."
@@ -131,6 +135,7 @@ introMainDialogue:
       run as_protag "..."
     (run wrap_text none "I am. That's why I'm also leaving you."):
       change_theme default
+      set data.mom true
       run as_protag "Yes I am. Just like him."
       run as_protag "Which is why I'm also leaving you behind."
 

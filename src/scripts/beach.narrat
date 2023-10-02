@@ -24,6 +24,7 @@ beachScene:
       run as_protag "a lot of gray clouds..."
     (run wrap_text none "Yeah, maybe you're right."): // Accept
       change_theme default
+      set data.ex true
       run as_protag "Ok, you're right." 
     (run wrap_text none "If that's what you think"): // Deflect
       change_theme default
@@ -42,6 +43,7 @@ beachScene:
       talk ex_bf glass_down "Anyway, I'll be right back."
     (run wrap_text none "Go on, a little food is always good."): // Accept
       change_theme default
+      set data.ex true
       run as_protag "Ask for that special sauce too."
       talk ex_bf glass_down "I knew it would cheer you up!"
       talk ex_bf glass_down "I'll be right back."
@@ -108,6 +110,7 @@ beachScene:
     talk ex_bf scared_down "always trying to make others feel guilty. You think you own the world! "
     (run wrap_text none "Okay, maybe you're right."): // Accept
       change_theme default
+      set data.ex true
       run as_protag "I'm sorry, I didn't mean to make you feel this way."
     (run wrap_text none "What??? I don't act like my mother."): // Reject
       change_theme default
@@ -115,6 +118,7 @@ beachScene:
       talk ex_bf scared_up "Okay, but I'm not asking for it!"
     (run wrap_text none "..."): // Deflect
       change_theme default
+      set data.ex true
       run as_protag "..."
   
   talk ex_bf right_down "I wanted to live with you together, to have a life with you."
@@ -150,11 +154,14 @@ beachScene:
       run as_protag "Goodbye."
     (run wrap_text none "Talk about our future."): // Accept
       change_theme default
+      set data.ex true
       run as_protag "I think we still have things to talk about..."
       run as_protag "our future."
       run as_protag "But not today, it's going to rain and I have to go home."
       talk ex_bf pout_glass "See you soon, Mona."
       run as_protag "See you soon, Dylan."
+  
+  jump climaxStart
 
   
 

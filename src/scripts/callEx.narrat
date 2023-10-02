@@ -36,9 +36,11 @@ callExScene:
     talk ex_bf pout_up "We've experienced very good things together"
     (run wrap_text none "..."): // Deflect
       change_theme default
+      set data.ex true
       talk ex_bf right_down "You know it..."
     (run wrap_text none "Good days..."): // Accept
       change_theme default
+      set data.ex true
       run as_protag "Yes, we had good days on that beach."
       talk ex_bf right_down "Yeah..."
     (run wrap_text none "Bad things too"): // Reject
@@ -63,6 +65,7 @@ callExScene:
       run as_protag "It's not your business."
     (run wrap_text none "The same as always."): // Accept
       change_theme default
+      set data.ex true
       run as_protag "She just get crazy, as usual."
     (run wrap_text none "It doesn't matter anymore."): // Deflect
       change_theme default
@@ -78,5 +81,4 @@ callExScene:
   run as_protag "Damn, now I have to meet Dylan tomorrow..."
   run as_protag "I just want to watch a movie and sleep."
 
-  jump beachStart
-
+  jump friendStart

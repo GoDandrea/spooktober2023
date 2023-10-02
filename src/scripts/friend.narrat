@@ -242,3 +242,5 @@ samanthaCaring:
   talk samantha idle "Ok... I'm sure you know what's best for you."
   talk samantha happy "Well, let's listen to Kling's Men's new album, then!"
   run as_protag "I'll get some snacks."
+
+  jump mirrorStart

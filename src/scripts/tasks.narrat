@@ -70,6 +70,7 @@ washingDishes:
     talk protag idle "So I..."
     (run wrap_text none "Wash the glasses first"): // Deflect
       change_theme default
+      set data.mom true
       run as_protag "Yeah, I think she's right about it..."
       run as_protag "I don't want my glasses full of oil."
     (run wrap_text none "Wash the pans first"): // Reject
@@ -114,6 +115,7 @@ storeFood:
       run as_protag "Old things must go for new things to come."
     (run wrap_text none "No, it's never good to waste food."): // Accept
       change_theme default
+      set data.mom true
       run as_protag "Better to leave it here."
     (run wrap_text none "I'll try to eat it now."): // Deflect
       change_theme default
