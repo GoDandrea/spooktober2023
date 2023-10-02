@@ -103,13 +103,18 @@ climaxScene:
   talk mother right "What is happening???"
   run as_protag "AAAAAAAAAAAAAAAAAAAAA"
   talk mother right "Mona..."
-  run as_protag "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  run as_protag "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  talk mother right "You are..."
 
   if $data.mom:
+    talk mother right "Becoming a monster!"
     jump endMotherStart
   if $data.ex:
+    talk mother right "Becoming a monster!"
     jump endExStart
   
+  talk mother right "You're vomiting like a beast!"
+  run as_protag "AAAAAAAAAAAAAAAAAAAAAAAA"
   jump endFriendStart
 
 

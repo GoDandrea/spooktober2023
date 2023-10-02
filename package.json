@@ -62,7 +62,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "Your game name",
+            "name": "Of_their_flesh",
             "authors": "Your name",
             "description": "Your game description"
           }
